@@ -1,0 +1,267 @@
+/* app stylesheet */
+a:hover {
+  text-decoration: none !important;
+}
+body {
+  background-color: #f1f1f1 !important;
+  margin:0;
+  padding:50px 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.button_bar {
+  position:absolute;
+  top:60px;
+  right:0px;
+  float:right;
+  clear:right;
+}
+.loading {
+  text-align: center;
+  color: #D4D4D4;
+}
+.hidden: {
+  display: none;
+}
+.button {
+  /*-moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; */
+  color: #fff;
+  padding:5px 2px;
+  display: inline-block; 
+  cursor: pointer;
+  text-decoration: none;
+}
+.button.menu{
+  position: relative;
+  font-size: 20px;
+  padding:3px 10px;
+  background-color: #5399a6;
+  height:34px;
+  transition: background-color 0.5s ease;
+
+}
+.button.menu:hover {
+  background-color: #71C8D9;   
+}
+.button.menu.selected {
+  background-color: #71C8D9;   
+}
+.clickable {
+  cursor: pointer;
+}
+.details {
+  width:100%;
+  position: absolute;
+  overflow: hidden;
+  height:0px;
+  top:100px;
+  color:#fff;
+  text-align: right;
+  background-color: #5399a6;
+  transition: height 0.3s ease;
+}
+.details.hide {
+  height:0px;
+}
+.details.show {
+  height:30px;
+}
+.details_text {
+  margin: 5px 20px;
+}
+.divider {
+  top:90px;
+  position: absolute;
+  background-color: #71C8D9;
+  height:20px;
+  width:100%;
+  margin-bottom: 10px;
+}
+.hidden {
+  display: none;
+}
+.page {
+  background-color: #fff;
+  min-width:800px;
+  padding:10px;
+  transition: height 0.5s ease;
+}
+.shadow {
+  -moz-box-shadow:    0px 0px 5px 0px #ccc;
+  -webkit-box-shadow: 0px 0px 5px 0px #ccc;
+  box-shadow:         0px 0px 5px 0px #ccc;
+}
+.shadow.inset {
+  -moz-box-shadow:    inset 0 0 5px #ccc;
+  -webkit-box-shadow: inset 0 0 5px #ccc;
+  box-shadow:         inset 0 0 5px #ccc;
+}
+.vertical_options {
+  width:150px;
+  height:auto;
+  float:left;
+  margin-right: 10px
+  background-color: transparent;
+}
+.vertical_options .button {
+  height: 20px;
+  background-color: #5399a6;
+  width:130px;
+  padding:5px 10px;
+  text-align: left;
+  font-size: 14px;
+  transition: padding 0.5s ease,width 0.5s ease,background-color 0.2s ease;
+}
+.vertical_options .button:hover {
+  padding: 5px 10px 5px 50px;
+  width:90px;
+  background-color: #71C8D9;
+}
+.vertical_options .button .highlighted {
+  padding: 5px 10px 5px 50px;
+  width:90px;
+}
+#repo .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+#about {
+  padding: 0 100px;
+}
+#content {
+  margin-top:50px;
+  padding-bottom: 30px;
+  max-height:10000px;
+  transition: max-height 0.5s ease;
+}
+#footer {
+  text-align:center;  
+  padding:10px 0px 40px 0px;
+}
+.tech_row {
+  color: #ffffff;
+  background-color: #808080;
+  -webkit-box-shadow: inset 0px -15px 11px -13px rgba(0,0,0,0.2);
+  -moz-box-shadow: inset 0px -15px 11px -13px rgba(0,0,0,0.2);
+  box-shadow: inset 0px -15px 11px -13px rgba(0,0,0,0.20);
+}
+.tech_link {
+  margin: 2px 20px;
+  color:#ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+.tech_link:hover {
+  color:#fff;
+}
+#header {
+  position: relative;
+  height:110px;
+}
+#home {
+  padding: 0 100px;
+}
+#nuig_logo {
+  position: absolute;
+  height:60px;
+  width:176px;
+  left:10px;
+  top:10px;
+  display:block;
+}
+#repo {
+}
+#title {
+  left:200px;
+  top:12px;
+  display:block;
+  position: absolute;
+  font-size:40px;
+  font-weight: bolder;
+}
+
+.shadow_below {
+  -webkit-box-shadow: 0px 15px 11px -13px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 15px 11px -13px rgba(0,0,0,0.2);
+  box-shadow: 0px 15px 11px -13px rgba(0,0,0,0.20);
+}
+
+
+
+.bottom_edge {
+  width:100%;
+  height:10px;
+}
+
+/*Reository Page*/
+#repo #control_panel {
+  height:auto;
+  width:100%;
+  padding: 20px;
+  display: inline-block;
+  background-color: #E0E0E0;
+}
+#repo .control_panel_container{
+  padding: 5px 40px 5px 15px;
+}
+#repo input[type=checkbox][disabled] {
+  text-decoration: line-through;
+  color: #DBDBDB;
+}
+#repo label.disabled {
+  text-decoration: line-through;
+  color: #DBDBDB;
+}
+#repo #export_panel {
+  background-color: #EDEDED;
+  margin: 0;
+  padding: 20px;
+}
+
+#repo .tissue_scroll {
+  overflow: auto;
+  height: 400px;
+  background-color: #EDEDED;
+}
+
+#repo .graph {
+  display: block;
+  padding:10px;
+  width:auto;
+  height:500px;
+  margin:30px;
+}
+#repo .container{
+  width:100%;
+}
+#repo .title {
+  position: relative;
+  width: 100%;
+  color:white;
+  height: 30px;
+  background-color: #71C8D9;
+}
+#repo .title h4 {
+  margin:2px 20px;
+  line-height: 30px;
+  float: left;
+}
+#repo .title .btn {
+  float:right;
+  margin:4px 10px 0 0;
+}
+
+#repo .row {
+  margin: 5px 4px 0px -7px;
+}
+
+#repo option[disabled] {  
+  text-decoration: line-through;
+  color: #DBDBDB;
+}
+
+#repo .poles-select {
+  width:40px ;
+}

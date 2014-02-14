@@ -1,0 +1,934 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Dec",
+				"Decision"
+			],
+			[
+				"check",
+				"check_attribute"
+			],
+			[
+				"nex",
+				"next_attribute"
+			],
+			[
+				"ne",
+				"next_attribute"
+			],
+			[
+				"branch",
+				"branch"
+			],
+			[
+				"log",
+				"log2"
+			],
+			[
+				"pos",
+				"possible_values"
+			],
+			[
+				"div",
+				"divide"
+			],
+			[
+				"targe",
+				"target_attribute"
+			],
+			[
+				"att",
+				"attributes"
+			],
+			[
+				"targ",
+				"target_attribute"
+			],
+			[
+				"ta",
+				"target_attribute"
+			],
+			[
+				"poss",
+				"possible_attribute_values"
+			],
+			[
+				"true",
+				"true_values"
+			],
+			[
+				"e",
+				"entropy"
+			],
+			[
+				"curr",
+				"current_info_gain"
+			],
+			[
+				"attr",
+				"attribute"
+			],
+			[
+				"numb",
+				"number_of_calls"
+			],
+			[
+				"Decision",
+				"decisionTreeCtrl"
+			],
+			[
+				"o",
+				"ol	Tag"
+			],
+			[
+				"new",
+				"new_branch"
+			],
+			[
+				"divi",
+				"divide_branch"
+			],
+			[
+				"same",
+				"same_target_values"
+			],
+			[
+				"tar",
+				"target"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"value",
+				"value"
+			],
+			[
+				"possi",
+				"possible_values"
+			],
+			[
+				"bes",
+				"best_attribute"
+			],
+			[
+				"da",
+				"dataset"
+			],
+			[
+				"curren",
+				"current_info_gain"
+			],
+			[
+				"in",
+				"in"
+			],
+			[
+				"info",
+				"information"
+			],
+			[
+				"data",
+				"dataset"
+			],
+			[
+				"dataset",
+				"dataset"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"best",
+				"best_attribute"
+			],
+			[
+				"cur",
+				"current_info_gain"
+			],
+			[
+				"a",
+				"attribute"
+			],
+			[
+				"t",
+				"true"
+			],
+			[
+				"N",
+				"N"
+			],
+			[
+				"I",
+				"I"
+			],
+			[
+				"D",
+				"D"
+			],
+			[
+				"C",
+				"C"
+			],
+			[
+				"tiss",
+				"tissue_names"
+			],
+			[
+				"tissue",
+				"tissue_names"
+			],
+			[
+				"gab",
+				"gabriels_hash"
+			],
+			[
+				"krewer",
+				"krewers_hash"
+			],
+			[
+				"krewers",
+				"krewers"
+			],
+			[
+				"c",
+				"controller"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"poles",
+				"poles_available"
+			],
+			[
+				"num",
+				"Number"
+			],
+			[
+				"read",
+				"readNext"
+			],
+			[
+				"files",
+				"files_left"
+			],
+			[
+				"pole",
+				"pole_sets"
+			],
+			[
+				"cs",
+				"csv_dat"
+			],
+			[
+				"freq",
+				"frequenciy"
+			],
+			[
+				"plott",
+				"plotted_data"
+			],
+			[
+				"tissu",
+				"tissues"
+			],
+			[
+				"post",
+				"postData"
+			],
+			[
+				"j",
+				"j"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"cond",
+				"conductivity"
+			],
+			[
+				"per",
+				"permittivity_data"
+			],
+			[
+				"conduc",
+				"conductivity_data"
+			],
+			[
+				"Krewer",
+				"Krewer"
+			],
+			[
+				"permi",
+				"permittivity"
+			],
+			[
+				"y",
+				"y"
+			],
+			[
+				"condu",
+				"conductivity_data"
+			],
+			[
+				"conduct",
+				"conductivity_series"
+			],
+			[
+				"graph",
+				"graph_data"
+			],
+			[
+				"grap",
+				"graph_data"
+			],
+			[
+				"receive",
+				"received_tissues"
+			],
+			[
+				"get",
+				"getNextTissue"
+			],
+			[
+				"plot",
+				"plotKrewer"
+			],
+			[
+				"frequen",
+				"frequencies"
+			],
+			[
+				"perm",
+				"permittivity"
+			],
+			[
+				"d",
+				"datasets"
+			],
+			[
+				"name",
+				"nameB"
+			],
+			[
+				"so",
+				"sort_tissues"
+			],
+			[
+				"debye",
+				"debyeArray"
+			],
+			[
+				"title",
+				"title_data"
+			],
+			[
+				"tabl",
+				"tableData"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"mongo",
+				"mongodb"
+			],
+			[
+				"home",
+				"home"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"f",
+				"font-size"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"b",
+				"b"
+			],
+			[
+				"con",
+				"conductivity_data"
+			],
+			[
+				"se",
+				"series"
+			],
+			[
+				"fr",
+				"frequency"
+			],
+			[
+				"start",
+				"start"
+			],
+			[
+				"stop",
+				"stopFreq"
+			],
+			[
+				"star",
+				"startFreq"
+			],
+			[
+				"po",
+				"pointsPerDecade"
+			],
+			[
+				"var",
+				"var"
+			],
+			[
+				"pol",
+				"polesPresentArray"
+			],
+			[
+				"const",
+				"const_c"
+			],
+			[
+				"is",
+				"isSelected"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"bo",
+				"border-bottom"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"de",
+				"denominator"
+			],
+			[
+				"sumatio",
+				"sumation_re"
+			],
+			[
+				"nue",
+				"numerator_re"
+			],
+			[
+				"sum",
+				"sumation_im"
+			],
+			[
+				"fre",
+				"frequencies"
+			],
+			[
+				"exi",
+				"exist"
+			],
+			[
+				"empty",
+				"emptySeries"
+			],
+			[
+				"bak",
+				"background-color"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"parseCsv",
+				"parseCsvToCole"
+			],
+			[
+				"n",
+				"Number"
+			],
+			[
+				"or",
+				"original_height"
+			],
+			[
+				"ma",
+				"max"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"margin-",
+				"margin-top"
+			],
+			[
+				"app",
+				"app"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 2415,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "/* app stylesheet */\na:hover {\n  text-decoration: none !important;\n}\nbody {\n  background-color: #f1f1f1 !important;\n  margin:0;\n  padding:50px 100px;\n  font-family: Arial, Helvetica, sans-serif;\n}\n.button_bar {\n  position:absolute;\n  top:60px;\n  right:0px;\n  float:right;\n  clear:right;\n}\n.loading {\n  text-align: center;\n  color: #D4D4D4;\n}\n.hidden: {\n  display: none;\n}\n.button {\n  /*-moz-border-radius: 5px;\n  -webkit-border-radius: 5px;\n  border-radius: 5px; */\n  color: #fff;\n  padding:5px 2px;\n  display: inline-block; \n  cursor: pointer;\n  text-decoration: none;\n}\n.button.menu{\n  position: relative;\n  font-size: 20px;\n  padding:3px 10px;\n  background-color: #5399a6;\n  height:34px;\n  transition: background-color 0.5s ease;\n\n}\n.button.menu:hover {\n  background-color: #71C8D9;   \n}\n.button.menu.selected {\n  background-color: #71C8D9;   \n}\n.clickable {\n  cursor: pointer;\n}\n.details {\n  width:100%;\n  position: absolute;\n  overflow: hidden;\n  height:0px;\n  top:100px;\n  color:#fff;\n  text-align: right;\n  background-color: #5399a6;\n  transition: height 0.3s ease;\n}\n.details.hide {\n  height:0px;\n}\n.details.show {\n  height:30px;\n}\n.details_text {\n  margin: 5px 20px;\n}\n.divider {\n  top:90px;\n  position: absolute;\n  background-color: #71C8D9;\n  height:20px;\n  width:100%;\n  margin-bottom: 10px;\n}\n.hidden {\n  display: none;\n}\n.page {\n  background-color: #fff;\n  min-width:800px;\n  padding:10px;\n  transition: height 0.5s ease;\n}\n.shadow {\n  -moz-box-shadow:    0px 0px 5px 0px #ccc;\n  -webkit-box-shadow: 0px 0px 5px 0px #ccc;\n  box-shadow:         0px 0px 5px 0px #ccc;\n}\n.shadow.inset {\n  -moz-box-shadow:    inset 0 0 5px #ccc;\n  -webkit-box-shadow: inset 0 0 5px #ccc;\n  box-shadow:         inset 0 0 5px #ccc;\n}\n.vertical_options {\n  width:150px;\n  height:auto;\n  float:left;\n  margin-right: 10px\n  background-color: transparent;\n}\n.vertical_options .button {\n  height: 20px;\n  background-color: #5399a6;\n  width:130px;\n  padding:5px 10px;\n  text-align: left;\n  font-size: 14px;\n  transition: padding 0.5s ease,width 0.5s ease,background-color 0.2s ease;\n}\n.vertical_options .button:hover {\n  padding: 5px 10px 5px 50px;\n  width:90px;\n  background-color: #71C8D9;\n}\n.vertical_options .button .highlighted {\n  padding: 5px 10px 5px 50px;\n  width:90px;\n}\n#repo .row {\n  margin-left: 0 !important;\n  margin-right: 0 !important;\n}\n#about {\n  padding: 0 100px;\n}\n#content {\n  margin-top:50px;\n  padding-bottom: 30px;\n  max-height:10000px;\n  transition: max-height 0.5s ease;\n}\n#footer {\n  text-align:center;  \n  padding:10px 0px 40px 0px;\n}\n.tech_row {\n  color: #ffffff;\n  background-color: #808080;\n  -webkit-box-shadow: inset 0px -15px 11px -13px rgba(0,0,0,0.2);\n  -moz-box-shadow: inset 0px -15px 11px -13px rgba(0,0,0,0.2);\n  box-shadow: inset 0px -15px 11px -13px rgba(0,0,0,0.20);\n}\n.tech_link {\n  margin: 2px 20px;\n  color:#ffffff;\n  cursor: pointer;\n  text-decoration: none;\n  font-weight: bold;\n}\n.tech_link:hover {\n  color:#fff;\n}\n#header {\n  position: relative;\n  height:110px;\n}\n#home {\n  padding: 0 100px;\n}\n#nuig_logo {\n  position: absolute;\n  height:60px;\n  width:176px;\n  left:10px;\n  top:10px;\n  display:block;\n}\n#repo {\n}\n#title {\n  left:200px;\n  top:12px;\n  display:block;\n  position: absolute;\n  font-size:40px;\n  font-weight: bolder;\n}\n\n.shadow_below {\n  -webkit-box-shadow: 0px 15px 11px -13px rgba(0,0,0,0.2);\n  -moz-box-shadow: 0px 15px 11px -13px rgba(0,0,0,0.2);\n  box-shadow: 0px 15px 11px -13px rgba(0,0,0,0.20);\n}\n\n\n\n.bottom_edge {\n  width:100%;\n  height:10px;\n}\n\n/*Reository Page*/\n#repo #control_panel {\n  height:auto;\n  width:100%;\n  padding: 20px;\n  display: inline-block;\n  background-color: #E0E0E0;\n}\n#repo .control_panel_container{\n  padding: 5px 40px 5px 15px;\n}\n#repo input[type=checkbox][disabled] {\n  text-decoration: line-through;\n  color: #DBDBDB;\n}\n#repo label.disabled {\n  text-decoration: line-through;\n  color: #DBDBDB;\n}\n#repo #export_panel {\n  background-color: #EDEDED;\n  margin: 0;\n  padding: 20px;\n}\n\n#repo .tissue_scroll {\n  overflow: auto;\n  height: 400px;\n  background-color: #EDEDED;\n}\n\n#repo .graph {\n  display: block;\n  padding:10px;\n  width:auto;\n  height:500px;\n  margin:30px;\n}\n#repo .container{\n  width:100%;\n}\n#repo .title {\n  position: relative;\n  width: 100%;\n  color:white;\n  height: 30px;\n  background-color: #71C8D9;\n}\n#repo .title h4 {\n  margin:2px 20px;\n  line-height: 30px;\n  float: left;\n}\n#repo .title .btn {\n  float:right;\n  margin:4px 10px 0 0;\n}\n\n#repo .row {\n  margin: 5px 4px 0px -7px;\n}\n\n#repo option[disabled] {  \n  text-decoration: line-through;\n  color: #DBDBDB;\n}",
+			"file": "static/css/app.css",
+			"file_size": 4555,
+			"file_write_time": 130349667477421616,
+			"settings":
+			{
+				"buffer_size": 4556,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:  ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 188.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/G/coding/git/fyp/server.js",
+		"/G/documents/college/ML & DM/Assignment 1/Decision Tree.html",
+		"/G/downloads/mindy2.sh",
+		"/G/downloads/mindy.sh",
+		"/G/coding/CompSoc/Tutorials/HTML 1/Basic Layout.html",
+		"/G/downloads/mindy3.sh",
+		"/G/documents/college/ML & DM/Assignment 1/Decision Tree Project.sublime-project",
+		"/C/Users/LcLk/AppData/Roaming/Sublime Text 2/Packages/Highlight/README.md",
+		"/G/documents/college/ML & DM/Decision Tree.html",
+		"/G/documents/college/ML & DM/angular.js",
+		"/G/documents/college/ML & DM/bootstrap.css",
+		"/G/coding/git/fyp/routes/export.js",
+		"/G/documents/rSoC_mar2013 WIT_ICGEE/UserProjects/designs/appliedVHDLProject/A4_hostMemWrRd/ISEProjects/hostMemWrRd.sim/sim_1/behav/fuse.log",
+		"/G/documents/college/SOC/rSoC_mar2013 WIT_ICGEE/rSoC_mar2013 WIT_ICGEE/UserProjects/designs/appliedVHDLProject/A4_hostMemWrRd/ISEProjects/hostMemWrRd.sim/sim_1/behav/fuse.log",
+		"/G/documents/college/SOC/rSoC_mar2013 WIT_ICGEE/rSoC_mar2013 WIT_ICGEE/UserProjects/designs/appliedVHDLProject/A2_hostCtrlRegWrRd/sourceVHDL/userFiles/IOBlk_hostCtrlRegWrRd.vhd",
+		"/G/coding/git/fyp/models/data/all_cole.csv",
+		"/G/coding/git/fyp/models/data/krewer/Aorta/DebyePolesBest.csv",
+		"/G/coding/git/fyp/models/csvreader.js",
+		"/G/coding/git/fyp/libs/complex.js",
+		"/G/coding/git/fyp/views/index.html",
+		"/G/coding/git/fyp/package.json",
+		"/G/coding/git/fyp/models/csvreader_os.js",
+		"/G/coding/git/fyp/public/export/0000000006/Krewer/Bladder.csv",
+		"/G/coding/git/fyp/node_modules/complex/index.js",
+		"/G/coding/git/fyp/node_modules/complex/complex.js",
+		"/C/Users/LcLk/.ssh/id_rsa.pub",
+		"/G/coding/git/fyp/public/js/controllers/RepoCtrl.js",
+		"/G/coding/git/fyp/routes/index.js",
+		"/G/coding/git/fyp/views/partials/repo.html",
+		"/G/coding/git/homepage/public/css/app.css",
+		"/G/coding/git/homepage/views/index.html",
+		"/G/coding/git/fyp/public/js/controllers/ImportCtrl.js",
+		"/G/coding/git/fyp/views/partials/import.html",
+		"/G/coding/git/fyp/public/js/lib/complex.js",
+		"/G/coding/git/fyp/public/js/directives.js",
+		"/G/coding/git/fyp/public/css/app.css",
+		"/G/coding/git/fyp/public/js/controllers/NavCtrl.js",
+		"/G/coding/git/fyp/public/js/lib/highcharts.src.js",
+		"/G/coding/git/fyp/public/js/lib/highcharts.js",
+		"/G/coding/git/fyp/public/js/lib/FileAPI.min.js",
+		"/G/coding/git/fyp/public/js/lib/angular-file-upload-shim.min.js",
+		"/G/coding/git/fyp/public/js/app.js",
+		"/G/coding/git/fyp/views/partials/home.html",
+		"/G/coding/git/fyp/views/partials/about.html",
+		"/G/coding/git/fyp/public/js/controllers/AboutCtrl.js",
+		"/G/coding/git/fyp/public/js/controllers.js",
+		"/G/coding/git/fyp/models/all_cole.csv",
+		"/G/coding/git/fyp/models/data/Fat (Average Infiltrated).csv",
+		"/G/coding/git/fyp/models/TissueModel.js",
+		"/G/coding/College/FYP/app.js",
+		"/G/coding/College/openshift/server.js",
+		"/G/coding/git/fyp/routes/fyp/index.js",
+		"/G/coding/College/FYP/app/views/index.html",
+		"/G/coding/College/FYP/app/routes/index.js",
+		"/G/coding/CompSoc/website/public/css/app.css",
+		"/G/coding/git/fyp/index.html",
+		"/G/coding/git/fyp/README.md",
+		"/G/coding/git/fyp/views/index.js",
+		"/G/coding/git/fyp/server_old.js",
+		"/G/coding/git/fyp/.gitignore",
+		"/G/coding/git/fyp/deplist.txt",
+		"/G/coding/CompSoc/website/views/index.html",
+		"/G/coding/College/FYP/package.json",
+		"/G/coding/CompSoc/website/server.js",
+		"/G/downloads/CORBA2/CORBA/src/server.java",
+		"/G/downloads/CORBA2/CORBA/src/DirectoryServant.java",
+		"/G/downloads/CORBA2/CORBA/src/DepartmentServant.java",
+		"/G/downloads/CORBA2/CORBA/src/client.java",
+		"/G/coding/College/FYP/public/js/controllers.js",
+		"/G/coding/College/FYP/app/views/partials/repo.html",
+		"/G/downloads/CORBA2/CORBA/src/UserServant.java",
+		"/G/downloads/CORBA2/CORBA/bin/client.class",
+		"/G/coding/College/FYP/public/js/directives.js",
+		"/G/downloads/CORBA2/CORBA/bin/UserServant.class",
+		"/G/downloads/CORBA2/CORBA/bin/DepartmentServant.class",
+		"/G/downloads/CORBA2/CORBA/bin/DirectoryServant.class",
+		"/G/downloads/CORBA2/CORBA/bin/server.class",
+		"/G/coding/College/FYP/public/js/lib/complex.js",
+		"/G/coding/git/nodejs/bootstrap.css",
+		"/G/coding/git/nodejs/bootstrap.js",
+		"/G/coding/git/nodejs/jquery.js",
+		"/G/coding/git/nodejs/server.js",
+		"/G/coding/git/nodejs/index.html",
+		"/G/coding/git/nodejs/package.json",
+		"/G/coding/College/FYP/public/css/app.css",
+		"/G/coding/College/FYP/public/js/library.js",
+		"/G/coding/College/FYP/app/models/DebyeModel.js",
+		"/G/coding/College/FYP/app/models/csvreader.js",
+		"/G/coding/College/FYP/app/models/TissueModel.js",
+		"/G/coding/College/FYP/app/models/data/all_cole.csv",
+		"/G/coding/College/FYP/app/models/ColeModel.js",
+		"/G/coding/College/FYP/app/models/all_cole.csv",
+		"/G/coding/College/FYP/app/models/data/Fat (Average Infiltrated).csv",
+		"/G/coding/College/FYP/app/models/index.js",
+		"/G/documents/college/SOC/rSoC_mar2013 WIT_ICGEE/rSoC_mar2013 WIT_ICGEE/UserProjects/designs/appliedVHDLProject/A1_ctrlRegBlk/ISEProjects/RFL_ctrlRegBlk.data/sources_1/fileset.xml",
+		"/G/documents/college/SOC/rSoC_mar2013 WIT_ICGEE/rSoC_mar2013 WIT_ICGEE/UserProjects/designs/appliedVHDLProject/A1_ctrlRegBlk/sourceVHDL/userFiles/ctrlRegBlk.vhd",
+		"/G/coding/College/FYP/app/models/debye.fat.csv",
+		"/G/coding/CompSoc/website/routes/api.js",
+		"/G/coding/CompSoc/website/routes/index.js",
+		"/G/coding/CompSoc/website/views/partials/partial2.jade",
+		"/G/coding/CompSoc/website/views/partials/partial1.jade",
+		"/G/coding/CompSoc/website/views/layout.jade",
+		"/G/coding/CompSoc/website/views/index.jade",
+		"/G/coding/College/FYP/public/js/app.js",
+		"/G/downloads/current_4ece_svg.svg",
+		"/G/coding/CompSoc/website/README_SEED.md",
+		"/G/coding/CompSoc/website/README.md",
+		"/G/coding/CompSoc/website/public/js/app.js",
+		"/G/coding/CompSoc/website/app.js",
+		"/G/coding/College/FYP/app/models/mongoconnect.js",
+		"/G/coding/College/FYP/app/models/cole.fat.csv",
+		"/G/coding/College/FYP/app/models/colefat.csv",
+		"/G/downloads/angular-express-seed-master/angular-express-seed-master/routes/api.js",
+		"/G/coding/College/FYP/public/js/services.js",
+		"/G/coding/College/FYP/app/models/fat.csv",
+		"/G/coding/College/FYP/app/models/blood.csv",
+		"/G/downloads/FatFullRange10PD.csv",
+		"/G/downloads/angular-express-seed-master/angular-express-seed-master/public/js/controllers.js",
+		"/G/coding/College/FYP/app/routes/api.js",
+		"/G/coding/College/FYP/app/routes/api/index.js",
+		"/G/coding/College/FYP/public/js/factories.js",
+		"/G/coding/College/FYP/app/models/ColeModel",
+		"/G/coding/Libraries and Samples/angular-seed-master/app/js/controllers.js",
+		"/G/coding/Libraries and Samples/angular-seed-master/app/js/services.js",
+		"/G/coding/College/FYP/public/js/lib/line-charts.js",
+		"/G/coding/College/FYP/app/data/DebyePolesBest.csv",
+		"/G/coding/College/FYP/public/js/filters.js",
+		"/G/coding/College/FYP/app/views/partials/home.html"
+	],
+	"find":
+	{
+		"height": 55.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\\r",
+			"\\r\\n",
+			"red",
+			" \"+",
+			"result_att",
+			"{};	",
+			"tau",
+			"console.log(err);",
+			");\n",
+			".csv",
+			"root",
+			"$scope	",
+			"$scope",
+			"$scope.",
+			"$scope.	",
+			"$scope",
+			"$scope.",
+			"$scope.e",
+			"$scope.ex",
+			"$scope.export",
+			"public",
+			"freq",
+			"data_sets",
+			"exportData",
+			"getLogFrequencies",
+			"e0",
+			"$scope.graphs",
+			"$scope",
+			"$scope.graphs",
+			"shadow",
+			"diabled",
+			"repositories",
+			"render_to",
+			"redner_to",
+			"getContainer",
+			"renderTo",
+			"render",
+			"j",
+			"J",
+			"separate_data",
+			"plotDebye",
+			"title",
+			"visible",
+			"highc",
+			"title",
+			"app",
+			"#!/",
+			">\n",
+			"$scope.frequencies",
+			"tissue.",
+			"	",
+			"selection",
+			"  \n",
+			"check",
+			"done",
+			"\n-",
+			"website",
+			"  ",
+			"  \\n",
+			"  ,   ",
+			"    ,   ",
+			"Fat                 ,   ",
+			",\\n",
+			"\\s\\s\\n",
+			"\\s\\s\\s\\s\\s\\s",
+			"\\t",
+			"	",
+			"attrs"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"white",
+			"Tissue",
+			",",
+			"",
+			"\\n",
+			",",
+			"",
+			"\\n",
+			",\\n",
+			","
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "server.js",
+					"settings":
+					{
+						"buffer_size": 2415,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "static/css/app.css",
+					"settings":
+					{
+						"buffer_size": 4556,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								525,
+								525
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 80.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 152.0,
+	"status_bar_visible": true
+}

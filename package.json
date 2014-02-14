@@ -1,22 +1,24 @@
 {
-  "name": "OpenShift-Sample-App",
-  "version": "1.0.0",
-  "description": "OpenShift Sample Application",
+  "name": "sample_server",
+  "version": "0.0.1",
+  "description": "fyp project redesigned for openshift using nodejs, expressjs, requirejs, sass and angularjs",
   "keywords": [
     "OpenShift",
     "Node.js",
     "application",
+    "expressjs",
+    "requirejs",
+    "angularjs",
     "openshift"
   ],
   "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url": "http://www.openshift.com/"
+    "name": "LcLk",
+    "email": "liam@krewer.me",
+    "url": "liam.krewer.me"
   },
-  "homepage": "http://www.openshift.com/",
+  "homepage": "liam.krewer.me",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/openshift/origin-server"
+    "type": "git"
   },
 
   "engines": {
@@ -25,7 +27,11 @@
   },
 
   "dependencies": {
-    "express": "~3.4.4"
+    "express": "~3.4.4",
+    "debug": ">= 0.7",
+    "mongoose": ">= 3.8",
+    "adm-zip": ">= 0.4",
+    "companion": ">= 0.0.2"
   },
   "devDependencies": {},
   "bundleDependencies": [],
