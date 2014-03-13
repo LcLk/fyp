@@ -1,69 +1,134 @@
 <!DOCTYPE html>
-<html id="ng-app" ng-app="app">
+<html id="ng-app" data-ng-app="app">
 <header>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<meta charset="utf-8">
 
 	<script src="/static/js/lib/angular-file-upload-shim.min.js"></script> 
 	<script type="text/javascript" src="/static/js/lib/angular/angular.js"></script>
+	<script type="text/javascript" src="/static/js/lib/angular/angular-route.js"></script>
+	<script type="text/javascript" src="/static/js/lib/angular/angular-animate.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script type="text/javascript" src="/static/js/lib/highcharts.js"></script>
-	<link rel="stylesheet" type="text/css" href="/static/css/app.css" media="screen" />
+	<!--<script type="text/javascript" src="/static/js/lib/ladda.min.js"></script>
+	<script type="text/javascript" src="/static/js/lib/spin.min.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="/static/css/nuigalway_styling.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/static/css/repository_styling.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" media="screen" />
+	<!-- <link rel="stylesheet" type="text/css" href="/static/css/ladda.min.css" media="screen" /> -->
+	<base href="/"></base>
+	<title data-ng-bind="'NUIG - ' + $root.title"></title>
 </header>
-<body class="shadow inset">
-	<div class="page shadow">
-
-		<!--Header bar-->
-		<div id="header" data-ng-controller="NavCtrl">
-			<a id="nuig_logo" class="clickable" href="http://nuigalway.ie" title="Go to NUIG HomePage">
-				<img src="/static/img/nuig_logo.png" >
-			</a>
-			<div id="title" >
-				NUIG Dielectrics
-			</div>
-			<div class="button_bar">
-				<a ng-repeat="(id,button) in menu" href="{{button.link}}" ng-class="{button: true,menu: true, selected: button.selected}">{{button.name}}</a>
-			</div>
-			<div class="divider"></div>
-		</div>
-		<h1 class="loading" ng-hide="init" ng-model="init" value="false" ng-init="init = true">Loading...</h1>
-		<!-- Content Area-->
-		<div id="content" ng-show="init"class="shadow_below" ng-view>
-		</div>
-		<div id="footer" class="container" data-ng-controller="NavCtrl">
-			<div class="row clickable" ng-click="show_footer = !show_footer" title="Click to view the technologies">
-				<b>Design & Code by Liam Krewer<br/></b>
-			</div>
-			<div class="row tech_row" ng-show="show_footer">
-				This web app was made using: <br/>
-				<a class="col-md-3" href="http://angularjs.org/" target="_blank" title="Client side MVC">
-					<img class="img-responsive" src="/static/img/angular.png">
-				</a>
-				<a class="col-md-3" href="http://nodejs.org/" target="_blank" title="Javascript Server running on V8 engine">
-					<img class="img-responsive" src="/static/img/node.png">
-				</a>
-				<a class="col-md-3" href="http://www.mongodb.org/" target="_blank" title="Fast Database & Aggregation">
-					<img class="img-responsive" src="/static/img/mongo.png">
-				</a>
-				<a class="col-md-3" href="http://www.highcharts.com/" target="_blank" title="Graphing Library">
-					<img class="img-responsive" src="/static/img/highcharts.png">
-				</a>
-				<div class="row">
-					<a target="_blank" href="http://getbootstrap.com/" class="tech_link" title="for css stytling and responsive layout">Bootstrap</a>
-					<a target="_blank" href="https://github.com/patrickroberts/Javascript-Complex-Math-Library" class="tech_link" title="Complex numbers for calculations">Complex.js</a>
-					<a target="_blank" href="http://mongoosejs.com/" class="tech_link" title="For interfacing with mongoDB">Mongoose.js</a>
-					<a target="_blank" href="http://expressjs.com/" class="tech_link" title="To make nodejs easier to setup">Express.js</a>
+<body>
+	<div id="container" data-ng-controller="NavCtrl">
+		<div id="changeable">
+			<div id="topBar">
+				<div class="floatLeft">
+					<span class="clickable">
+						<span class="icon">L </span>
+						Leagan Gaeilge
+					</span>
+					<span class="clickable"> 
+						<span class="icon">A </span>
+						Text Version
+					</span>
+					<span> 
+						<span class="icon">i </span>
+						Display: Zoom (
+						<span class="icon zoom clickable" title="Increase Font Size">+</span>
+						<span class="icon zoom clickable" title="Decrease Font Size">-</span>
+						)
+					</span>
+					<span> 
+						<span class="icon">V </span>
+						View
+						<span class="clickable">Normal</span>
+						<span class="clickable">High Contrast</span>
+					</span>
 				</div>
+				<div class="floatRight">
+					<span class="clickable"> 
+						<span class="icon">P </span>
+						Printer Friendly
+					</span>
+					<span class="clickable"> 
+						<span class="icon">M </span>
+						<a href="http://www.nuigalway.ie/sitemap.php">
+							Site Map
+						</a>
+					</span>
+				</div>
+			</div>
+			<div class="clear"></div>	
+			<div id="bannerImage">
+				<a href="http://www.nuigalway.ie">
+					<img id="logo" src="http://www.nuigalway.ie/images/logos/logo.png" alt="NUI Galway Logo" title="NUI Galway Homepage">
+				</a>
+			</div>
+			<div class="clear"></div>	
+		</div>
+		<div id="breadCrumb">
+				<div id="leftBreadcrumb">
+					You are here :
+				</div>
+				<div id="rightBreadcrumb">
+					<div class="floatLeft">
+						<span data-ng-repeat="crumb in breadcrumbs">
+							<a href="{{crumb.link}}"  title="{{crumb.name}}">{{crumb.name}}</a>
+							{{ ($last) && ' ' || '>' }}
+						</span>
+					</div>
+					<img src="http://www.nuigalway.ie/images/arrows/facdept_breadcrumb.png" >
+				</div>
+		</div>
+		<div id="navcon">
+			<div id="leftColumn" >
+				<div id="navigation" class="{{navClass}}">
+					<a href="http://www.nuigalway.ie/"  title="NUI Galway HomePage" class="nav home">NUI Galway Home</a>
+
+					<div data-ng-repeat="option in menu" class="repeat-animations">
+						<a class="nav" href="{{option.link}}" data-ng-class="isActive(option.link)">{{option.name}}</a>
+
+						<div data-ng-repeat="subOption in option.subMenu | filter: (isActive(option.link) == ' selected' && ' ' || 'roflcopter')" class="repeat-animations">
+							<a class="nav submenu" href="{{subOption.link}}" data-ng-class="isActive(subOption.link)">{{subOption.name}}</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div id="contentColumn">
+				<!-- Content will be loaded dynamically in here by AngularJS routing -->
+				<div data-ng-view  id="ngview" height-reflow></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="footer">
+			<div id="footerLeft"></div>
+			<div id="footerRight">
+				<a href="{{link.link}}" data-ng-repeat="link in footerLinks">{{link.name}}</a>
+			</div>
+			<div id="valid">
+				Electrical & Electronic Engineering
+				<br>
+				Engineering Building, National University of Ireland, Galway, Galway,  Ireland.
+				<br>
+				Phone +353 91 492728 Fax +353 91 494511
+				<br>
+				E-mail: mary.costello<span class="at"></span>nuigalway.ie
+				<br>
+				<br/>
+				<span>This page was last updated ....</span>
 			</div>
 		</div>
 	</div>
-
+</body>
 	<script type="text/javascript" src="/static/js/lib/angular/angular-sanitize.min.js"></script>
+	<script src="/static/js/lib/angular-file-upload.js"></script> 
   	<!-- angular files  -->
 	<script type="text/javascript" src="/static/js/lib/complex.js"></script>
 	<script type="text/javascript" src="/static/js/filters.js"></script>
 	<script type="text/javascript" src="/static/js/directives.js"></script>
+	<script type="text/javascript" src="/static/js/factories.js"></script>
 	<script type="text/javascript" src="/static/js/services.js"></script>
 	<script type="text/javascript" src="/static/js/app.js"></script>
 	<script type="text/javascript" src="/static/js/controllers/NavCtrl.js"></script>
@@ -71,7 +136,14 @@
 	<script type="text/javascript" src="/static/js/controllers/AboutCtrl.js"></script>
 	<script type="text/javascript" src="/static/js/controllers/RepoCtrl.js"></script>
 	<script type="text/javascript" src="/static/js/controllers/ImportCtrl.js"></script>
+	<script type="text/javascript" src="/static/js/controllers/Repo/HomeCtrl.js"></script>
+	<script type="text/javascript" src="/static/js/controllers/Repo/ImportCtrl.js"></script>
+	<script type="text/javascript" src="/static/js/controllers/Repo/ExportCtrl.js"></script>
+	<script type="text/javascript" src="/static/js/controllers/Repo/ReferencesCtrl.js"></script>
+	<script type="text/javascript" src="/static/js/controllers/Repo/IntroductionCtrl.js"></script>
+	<script type="text/javascript" src="/static/js/controllers/Repo/SingleCtrl.js"></script>
+	<script type="text/javascript" src="/static/js/controllers/Repo/MultipleCtrl.js"></script>
+	<script type="text/javascript" src="/static/js/helper.js"></script>
 
-</body>
 
 </html>

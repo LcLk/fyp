@@ -140,7 +140,7 @@ function parseKrewerFile(name){
 		pole_sets[current_pole_set] = {
 			const_p: current_line[0],
 			const_c: current_line[1],
-			pole_sets: pole_set
+			poles: pole_set
 		};
 	}	
 

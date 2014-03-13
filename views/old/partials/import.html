@@ -1,0 +1,44 @@
+
+<div id="import" class="container">
+	<div class="row title">
+		<h3><b>Uploading Data</b></h3>
+		<p></p>
+	</div>
+	<div id="step1">
+		<div class="title row">
+			<h3><b>Step #1</b></h3>
+		</div>
+		<form id="step1" class="row form-group" action="upload/initial" method="post" autocomplete="on" enctype="multipart/form-data" target="_self">
+
+			<div class="col-lg-4">
+			    <label for="import_email">Email Address</label>
+				<input type="email" id="import_email" ng-model="upload.email" class="form-control" placeholder="email address">
+			</div>
+			<div class="col-lg-4">
+			    <label for="import_email">Upload Data</label>
+				<input type="file" id="import_email" onchange="angular.element(this).scope().fileNameChaged(this)" accept="text/csv" ng-file-select="onFileSelect($files)" class="form-control">
+			</div>
+			<div class="col-lg-4">
+				<br>
+			    <button type="submit" class="btn btn-primary" ng-click="uploadOne()">Upload</button>
+			    <span>Uploading<span loading></span></span>
+			</div>
+		</form>
+	</div>
+
+	<div id="step2" ng-show="completed.step1">
+		<div class="title row">
+			<h3><b>Step #2</b></h3>
+		</div>
+		<div  class="row form-group">
+			<div class="col-lg-4">
+			</div>
+			<div class="col-lg-4">
+			</div>
+			<div class="col-lg-4">
+			</div>
+		</div>
+	</div>
+
+	<br>
+</div>

@@ -1,0 +1,22 @@
+<div data-ng-controller="RepoReferencesCtrl" id="ref" class="content container">
+	<br />
+	<h4 class="greyTitle">References</h4>
+	<p>
+		This page offers a list of descriptions and links to external data and information sources used to develop this repository.
+	</p>	
+	<br />
+
+	<div id="references">
+
+		<div class="row refBox" ng-class="{'selected': (r.number == scrollNumber)}" ng-repeat="r in references" id="ref{{r.number}}" ng-click="select(r.number)">
+			<div class="row refTitle">
+				<b>{{r.number}}. {{r.title}}</b>
+			</div>
+			<div class="row refContent" ng-bind-html="r.content"></div>
+		</div>
+			<br />
+			<br />
+
+	</div>
+
+</div>	

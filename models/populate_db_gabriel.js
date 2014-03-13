@@ -67,6 +67,7 @@ function readGabrielFile(callback){
 
 	console.log("reading tissues from all_cole file");
 	var lines = fs.readFileSync("data/all_cole.csv").toString().split('\n');
+	console.log("number of lines = "+ lines.length);
 	readNext(lines);
 };
 

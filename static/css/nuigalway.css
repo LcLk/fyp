@@ -1,0 +1,129 @@
+@charset "utf-8";
+/************************************************************
+
+	Usage:
+  CSS styles shared across entire site
+
+ ************************************************************/
+
+/* Body Styles */
+body {
+	margin: 10px 0 10px 0;
+}
+/* Remove border from linked images and fix vertical align */
+	img {
+	border: none;
+	vertical-align: bottom;
+}
+/* Remove Text decoration on images */
+	a {
+	text-decoration: underline;
+	color: #0063a3;
+}
+a:visited {
+	color: #0063a3;
+}
+a:hover, a:focus, a:active {
+	color: #555;
+}
+/* Hide text where necessary */
+	.hide-text {
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	text-align: left !important;
+	font-size: 0.1em;
+}
+/* Set the font, text size and alignment of inputs */
+	input, textarea, select, button {
+	vertical-align: middle;
+	font: normal 1em Arial, Helvetica, sans-serif;
+	color: #333;
+}
+/* Accessible way of hiding content */
+	#accessibility, .full-hide {
+	position: absolute;
+	top: 0;
+	left: -9999px;
+	height: 0px;
+}
+a.full-hide:hover, a.full-hide:focus, a.full-hide:active {
+	color: #0063a3;
+	font-size: 1.4em;
+	text-decoration: underline;
+	left: 250px;
+	top: 10px;
+}
+/* Setting a height on all li and a's for IE 6 */
+	* html ul li, * html a {
+	height: 1px;
+}
+/* Forms */
+form {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+/*
+==============================
+     Button Styles
+==============================
+*/
+    
+button {
+	position: relative;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	overflow: visible;
+}
+button::-moz-focus-inner {
+ border: none;
+}
+button span {
+	position: relative;
+	display: block;
+	white-space: nowrap;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	button span {
+		margin-top: -1px;
+	}
+}
+/*
+================================
+	Content
+================================
+*/
+#nuigalway-header {
+	padding: 10px 10px 20px 10px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 20px;
+	position: relative;
+	height: 50px;
+	z-index: 100;
+}
+#nuigalway-logo {
+	float: left;
+}
+#search-bar {
+	text-align: right;
+	margin-right: 5px;
+	float: right;
+}
+.search-label {
+	display: none;
+	width: 0;
+	height: 0;
+	float: left;
+	vertical-align: top;
+}
+input#keywords, input#q {
+	border: 1px solid #cacaca;
+	color: #999;
+	width: 156px;
+	height: 15px;
+	padding: 6px 4px 4px 4px;
+	font-size: .9em;
+	font-family: arial, helvetica, sans-serif;
+}

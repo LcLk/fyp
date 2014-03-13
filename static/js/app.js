@@ -7,25 +7,42 @@ angular.module('app', [
   'app.filters',
   'app.services',
   'app.directives',
-  'ngSanitize'
+  'app.factories',
+  'ngSanitize',
+  'angularFileUpload',
+  'ngRoute', //the route provider(as used below) is a separate module in 1.1.5 onwards (I upgraded to 1.2 from 1.0.4)
+  'ngAnimate' //animations have also been split into a separate module.
 ]).
 config(function ($routeProvider, $locationProvider) {
   $routeProvider.
     when('/home', {
-      templateUrl: 'partials/home',
-      controller: 'HomeCtrl'
+      templateUrl: '/views/partials/home.html',
+      controller: 'HomeCtrl',
+      title: "Home"
     }).
-    when('/repo', {
-      templateUrl: 'partials/repo',
-      controller: 'RepoCtrl'
+    when('/repo/:page',{
+      templateUrl: function(rp){
+        return '/views/partials/repo/'+rp.page+'.html'
+      },
+      title: "Repository"
     }).
-    when('/about', {
-      templateUrl: 'partials/about',
-      controller: 'AboutCtrl'
+    when('/repo',{
+      redirectTo: '/repo/home'
     }).
-    when('/import', {
-      templateUrl: 'partials/import',
-      controller: 'ImportCtrl'
+    when('/other1', {
+      templateUrl: '/views/partials/other1.html',
+      controller: 'HomeCtrl',
+      title: "Other Page"
+    }).
+    when('/other2', {
+      templateUrl: '/views/partials/other2.html',
+      controller: 'HomeCtrl',
+      title: "Other Page 2"
+    }).
+    when('/other3', {
+      templateUrl: '/views/partials/other3.html',
+      controller: 'HomeCtrl',
+      title: "Other Page 3"
     }).
     otherwise({
       redirectTo: '/home'

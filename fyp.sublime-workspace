@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"parse",
+				"parse_settings"
+			],
+			[
 				"Dec",
 				"Decision"
 			],
@@ -510,17 +514,13 @@
 			[
 				"margin-",
 				"margin-top"
-			],
-			[
-				"app",
-				"app"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "server.js",
+			"file": "/G/coding/git/fyp/server.js",
 			"settings":
 			{
 				"buffer_size": 2415,
@@ -528,14 +528,38 @@
 			}
 		},
 		{
-			"contents": "/* app stylesheet */\na:hover {\n  text-decoration: none !important;\n}\nbody {\n  background-color: #f1f1f1 !important;\n  margin:0;\n  padding:50px 100px;\n  font-family: Arial, Helvetica, sans-serif;\n}\n.button_bar {\n  position:absolute;\n  top:60px;\n  right:0px;\n  float:right;\n  clear:right;\n}\n.loading {\n  text-align: center;\n  color: #D4D4D4;\n}\n.hidden: {\n  display: none;\n}\n.button {\n  /*-moz-border-radius: 5px;\n  -webkit-border-radius: 5px;\n  border-radius: 5px; */\n  color: #fff;\n  padding:5px 2px;\n  display: inline-block; \n  cursor: pointer;\n  text-decoration: none;\n}\n.button.menu{\n  position: relative;\n  font-size: 20px;\n  padding:3px 10px;\n  background-color: #5399a6;\n  height:34px;\n  transition: background-color 0.5s ease;\n\n}\n.button.menu:hover {\n  background-color: #71C8D9;   \n}\n.button.menu.selected {\n  background-color: #71C8D9;   \n}\n.clickable {\n  cursor: pointer;\n}\n.details {\n  width:100%;\n  position: absolute;\n  overflow: hidden;\n  height:0px;\n  top:100px;\n  color:#fff;\n  text-align: right;\n  background-color: #5399a6;\n  transition: height 0.3s ease;\n}\n.details.hide {\n  height:0px;\n}\n.details.show {\n  height:30px;\n}\n.details_text {\n  margin: 5px 20px;\n}\n.divider {\n  top:90px;\n  position: absolute;\n  background-color: #71C8D9;\n  height:20px;\n  width:100%;\n  margin-bottom: 10px;\n}\n.hidden {\n  display: none;\n}\n.page {\n  background-color: #fff;\n  min-width:800px;\n  padding:10px;\n  transition: height 0.5s ease;\n}\n.shadow {\n  -moz-box-shadow:    0px 0px 5px 0px #ccc;\n  -webkit-box-shadow: 0px 0px 5px 0px #ccc;\n  box-shadow:         0px 0px 5px 0px #ccc;\n}\n.shadow.inset {\n  -moz-box-shadow:    inset 0 0 5px #ccc;\n  -webkit-box-shadow: inset 0 0 5px #ccc;\n  box-shadow:         inset 0 0 5px #ccc;\n}\n.vertical_options {\n  width:150px;\n  height:auto;\n  float:left;\n  margin-right: 10px\n  background-color: transparent;\n}\n.vertical_options .button {\n  height: 20px;\n  background-color: #5399a6;\n  width:130px;\n  padding:5px 10px;\n  text-align: left;\n  font-size: 14px;\n  transition: padding 0.5s ease,width 0.5s ease,background-color 0.2s ease;\n}\n.vertical_options .button:hover {\n  padding: 5px 10px 5px 50px;\n  width:90px;\n  background-color: #71C8D9;\n}\n.vertical_options .button .highlighted {\n  padding: 5px 10px 5px 50px;\n  width:90px;\n}\n#repo .row {\n  margin-left: 0 !important;\n  margin-right: 0 !important;\n}\n#about {\n  padding: 0 100px;\n}\n#content {\n  margin-top:50px;\n  padding-bottom: 30px;\n  max-height:10000px;\n  transition: max-height 0.5s ease;\n}\n#footer {\n  text-align:center;  \n  padding:10px 0px 40px 0px;\n}\n.tech_row {\n  color: #ffffff;\n  background-color: #808080;\n  -webkit-box-shadow: inset 0px -15px 11px -13px rgba(0,0,0,0.2);\n  -moz-box-shadow: inset 0px -15px 11px -13px rgba(0,0,0,0.2);\n  box-shadow: inset 0px -15px 11px -13px rgba(0,0,0,0.20);\n}\n.tech_link {\n  margin: 2px 20px;\n  color:#ffffff;\n  cursor: pointer;\n  text-decoration: none;\n  font-weight: bold;\n}\n.tech_link:hover {\n  color:#fff;\n}\n#header {\n  position: relative;\n  height:110px;\n}\n#home {\n  padding: 0 100px;\n}\n#nuig_logo {\n  position: absolute;\n  height:60px;\n  width:176px;\n  left:10px;\n  top:10px;\n  display:block;\n}\n#repo {\n}\n#title {\n  left:200px;\n  top:12px;\n  display:block;\n  position: absolute;\n  font-size:40px;\n  font-weight: bolder;\n}\n\n.shadow_below {\n  -webkit-box-shadow: 0px 15px 11px -13px rgba(0,0,0,0.2);\n  -moz-box-shadow: 0px 15px 11px -13px rgba(0,0,0,0.2);\n  box-shadow: 0px 15px 11px -13px rgba(0,0,0,0.20);\n}\n\n\n\n.bottom_edge {\n  width:100%;\n  height:10px;\n}\n\n/*Reository Page*/\n#repo #control_panel {\n  height:auto;\n  width:100%;\n  padding: 20px;\n  display: inline-block;\n  background-color: #E0E0E0;\n}\n#repo .control_panel_container{\n  padding: 5px 40px 5px 15px;\n}\n#repo input[type=checkbox][disabled] {\n  text-decoration: line-through;\n  color: #DBDBDB;\n}\n#repo label.disabled {\n  text-decoration: line-through;\n  color: #DBDBDB;\n}\n#repo #export_panel {\n  background-color: #EDEDED;\n  margin: 0;\n  padding: 20px;\n}\n\n#repo .tissue_scroll {\n  overflow: auto;\n  height: 400px;\n  background-color: #EDEDED;\n}\n\n#repo .graph {\n  display: block;\n  padding:10px;\n  width:auto;\n  height:500px;\n  margin:30px;\n}\n#repo .container{\n  width:100%;\n}\n#repo .title {\n  position: relative;\n  width: 100%;\n  color:white;\n  height: 30px;\n  background-color: #71C8D9;\n}\n#repo .title h4 {\n  margin:2px 20px;\n  line-height: 30px;\n  float: left;\n}\n#repo .title .btn {\n  float:right;\n  margin:4px 10px 0 0;\n}\n\n#repo .row {\n  margin: 5px 4px 0px -7px;\n}\n\n#repo option[disabled] {  \n  text-decoration: line-through;\n  color: #DBDBDB;\n}",
-			"file": "static/css/app.css",
-			"file_size": 4555,
-			"file_write_time": 130349667477421616,
+			"file": "/G/coding/git/fyp/views/index.html",
 			"settings":
 			{
-				"buffer_size": 4556,
-				"line_ending": "Unix"
+				"buffer_size": 2331,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<div id=\"footer\" class=\"container\" data-ng-controller=\"NavCtrl\">\n			<div class=\"row clickable\" ng-click=\"show_footer = !show_footer\" title=\"Click to view the technologies\">\n				<b>Design & Code by Liam Krewer<br/></b>\n			</div>\n			<div class=\"row tech_row\" ng-show=\"show_footer\">\n				This web app was made using: <br/>\n				<a class=\"col-md-3\" href=\"http://angularjs.org/\" target=\"_blank\" title=\"Client side MVC\">\n					<img class=\"img-responsive\" src=\"/static/img/angular.png\">\n				</a>\n				<a class=\"col-md-3\" href=\"http://nodejs.org/\" target=\"_blank\" title=\"Javascript Server running on V8 engine\">\n					<img class=\"img-responsive\" src=\"/static/img/node.png\">\n				</a>\n				<a class=\"col-md-3\" href=\"http://www.mongodb.org/\" target=\"_blank\" title=\"Fast Database & Aggregation\">\n					<img class=\"img-responsive\" src=\"/static/img/mongo.png\">\n				</a>\n				<a class=\"col-md-3\" href=\"http://www.highcharts.com/\" target=\"_blank\" title=\"Graphing Library\">\n					<img class=\"img-responsive\" src=\"/static/img/highcharts.png\">\n				</a>\n				<div class=\"row\">\n					<a target=\"_blank\" href=\"http://getbootstrap.com/\" class=\"tech_link\" title=\"for css stytling and responsive layout\">Bootstrap</a>\n					<a target=\"_blank\" href=\"https://github.com/patrickroberts/Javascript-Complex-Math-Library\" class=\"tech_link\" title=\"Complex numbers for calculations\">Complex.js</a>\n					<a target=\"_blank\" href=\"http://mongoosejs.com/\" class=\"tech_link\" title=\"For interfacing with mongoDB\">Mongoose.js</a>\n					<a target=\"_blank\" href=\"http://expressjs.com/\" class=\"tech_link\" title=\"To make nodejs easier to setup\">Express.js</a>\n				</div>\n			</div>\n		</div>",
+			"settings":
+			{
+				"buffer_size": 1632,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/G/coding/git/fyp/static/js/controllers/RepoCtrl.js",
+			"settings":
+			{
+				"buffer_size": 23019,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\n<div id=\"repo\">\n	<!-- Control Panel for generating data -->\n	<div class=\"control_panel_container\">\n		<h3><b>Using the Repository</b></h3>\n		<p>The repository contains datasets for modeling dielectric properties of human tissues. You can select the datasets, tissue samples, frequency range and steps. The data can be graphed or downloaded. If clarification is needed for any steps, hovering over any input fields will give specific information. </p><br>\n			<div class=\"title row\"><h4><b>Repository Control Panel</b></h4></div>\n		<div id=\"control_panel\" class=\"container\">\n			<div class=\"row\">\n				<div class=\"col-md-3\" >\n\n					<div class=\"form-group\">\n						<label title=\"\">Select Datasets to model</label>\n						<div class=\"checkbox row form-inline\" ng-repeat=\"v in datasets\">\n						    <label class=\"col-md-4\">\n								<input type=\"checkbox\"  ng-model=\"v.selected\">{{v.name}}  \n						    </label>\n						    <span class=\"col-md-6 col-md-offset-1 form-inline\"> poles:\n						    	<select ng-options=\"pole for pole in selectable_poles[v.name].poles\" class=\"poles-select\" ng-model=\"v.pole\" ng-disabled=\"selectable_poles[v.name].disabled \" >\n					    		</select>\n					    	</span>		\n						</div>\n					</div>\n\n					<div class=\"form-group\">\n					  <label for=\"form_lowfreq\">Select Lower Frequency Bound</label>\n						<select id=\"form_lowfreq\" ng-model=\"selected.startFreq\" ng-options=\"f.value as f.key for f in frequencies\" class=\"form-control input-sm\">\n						</select>\n					</div>\n					<div class=\"form-group\">\n					  <label for=\"form_highfreq\">Select Upper Frequency Bound</label>	\n						<select id=\"form_highfreq\" ng-model=\"selected.stopFreq\" ng-options=\"f.value as f.key for f in frequencies\" class=\"form-control input-sm\">\n						</select>\n					</div>\n					<div class=\"form-group\">\n					  <label for=\"form_decade\">Enter Points per Decade</label>	\n					  <input type=\"number\" class=\"form-control\" id=\"form_decade\" placeholder=\"Select Points per Decade\" ng-model=\"selected.pointsPerDecade\"> \n					</div>\n\n					<div class=\"form-group\">\n						<div class=\"form-group\">\n							<button type=\"button\" ng-Click=\"model_data()\" class=\"btn btn-primary btn-lg\">Generate Graph</button>\n							<button type=\"button\" ng-Click=\"reset()\" class=\"btn btn-danger btn-lg\">Clear Settings</button>\n						</div>\n					</div>\n				</div>\n\n				<!-- Selecting Tissue(s) -->\n				<div class=\"col-md-3 col-md-offset-1\">\n					<label title=\"\">Select Tissues to model</label>\n					<div class=\"tissue_scroll container\">\n						<div class=\"row\" ng-repeat=\"tissue in tissues_sorted\">\n						    <label ng-class=\"{disabled: tissues[tissue].disabled, checkbox: true}\">\n								<input type=\"checkbox\"   ng-model=\"tissues[tissue].selected\" ng-disabled=\"tissues[tissue].disabled\" >{{tissue}}\n						    </label>\n						</div>\n					</div>\n				</div>\n\n				<!-- Expor`t panel -->\n				<div class=\"col-md-3 col-md-offset-1\">\n					<label title=\"if multiple tissues are selected the file will be a zipped folder\">Export Data</label><br>\n				    <label for=\"form_export_format\">Select Export Format</label>\n					<select id=\"form_export_format\" ng-model=\"export.selected.format\" class=\"form-control input-sm\" >\n						    <option ng-repeat=\"v in export.formats\" ng-disabled=\"v.disabled\" value=\"{{v.name}}\">{{v.name}}</option>\n					</select>\n					<br>\n					<div class=\"form-group\">\n						<button type=\"button\" ng-Click=\"exportData()\" class=\"btn btn-primary btn-lg\">Generate File(s)</button>\n						<a type=\"button\" href=\"{{export.url}}\" class=\"btn btn-primary btn-lg\" ng-disabled=\"!export.file_ready\" target=\"_blank\">Download</a>\n					</div>\n				</div>\n			</div>	\n		</div>\n\n\n\n	<!-- Output area for graphs and tables -->\n	<div class=\"output\">\n		<div class=\"container\">\n			<div class=\"row\">\n				<div class=\"col-md-6\">\n					<div class=\"title row text-left\"><h4> Permittivity Graph</h4>\n                    	<button type=\"button\" class=\"btn btn-info btn-xs\" ng-model=\"visible.permittivity\" value=\"true\" ng-click=\"visible.permittivity = !visible.permittivity\">{{visible.permittivity && 'Hide ' || 'Show'}}</button>\n                    </div>\n					<div id=\"permittivity_container\" class=\"graph\" ng-show=\"visible.permittivity\"></div>\n				</div>\n				<div class=\"col-md-6\">\n					<div class=\"title row text-left\"><h4> Conductivity Graph</h4>\n                    	<button type=\"button\" class=\"btn btn-info btn-xs\" ng-model=\"visible.conductivity\" value=\"true\" ng-click=\"visible.conductivity = !visible.conductivity\">{{visible.conductivity && 'Hide ' || 'Show'}}</button>\n                    </div>\n					<div id=\"conductivity_container\" class=\"graph\" ng-show=\"visible.conductivity\"></div>\n				</div>\n			</div>\n			<br/>\n			<div class=\"row\" ng-repeat=\"(name,table) in tables\">\n				<div class=\"col-md-12\">\n					<calculated-data-table data=\"table.tableData\" visible=\"table.visible\" name=\"name\"></calculated-data-table>\n				</div>\n			</div>\n		</div>\n	</div>\n</div>",
+			"file": "/G/coding/git/fyp/views/partials/repo.html",
+			"file_size": 4989,
+			"file_write_time": 130371985212722990,
+			"settings":
+			{
+				"buffer_size": 4886,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -571,6 +595,10 @@
 	},
 	"file_history":
 	[
+		"/G/coding/git/fyp2/fyp/static/css/app.css",
+		"/G/coding/git/fyp2/fyp/server.js",
+		"/G/coding/git/fyp/static/js/controllers/RepoCtrl.js",
+		"/G/coding/git/fyp/views/partials/repo.html",
 		"/G/coding/git/fyp/server.js",
 		"/G/documents/college/ML & DM/Assignment 1/Decision Tree.html",
 		"/G/downloads/mindy2.sh",
@@ -599,7 +627,6 @@
 		"/C/Users/LcLk/.ssh/id_rsa.pub",
 		"/G/coding/git/fyp/public/js/controllers/RepoCtrl.js",
 		"/G/coding/git/fyp/routes/index.js",
-		"/G/coding/git/fyp/views/partials/repo.html",
 		"/G/coding/git/homepage/public/css/app.css",
 		"/G/coding/git/homepage/views/index.html",
 		"/G/coding/git/fyp/public/js/controllers/ImportCtrl.js",
@@ -695,10 +722,7 @@
 		"/G/coding/College/FYP/app/models/ColeModel",
 		"/G/coding/Libraries and Samples/angular-seed-master/app/js/controllers.js",
 		"/G/coding/Libraries and Samples/angular-seed-master/app/js/services.js",
-		"/G/coding/College/FYP/public/js/lib/line-charts.js",
-		"/G/coding/College/FYP/app/data/DebyePolesBest.csv",
-		"/G/coding/College/FYP/public/js/filters.js",
-		"/G/coding/College/FYP/app/views/partials/home.html"
+		"/G/coding/College/FYP/public/js/lib/line-charts.js"
 	],
 	"find":
 	{
@@ -812,12 +836,12 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "server.js",
+					"file": "/G/coding/git/fyp/server.js",
 					"settings":
 					{
 						"buffer_size": 2415,
@@ -844,25 +868,105 @@
 				},
 				{
 					"buffer": 1,
-					"file": "static/css/app.css",
+					"file": "/G/coding/git/fyp/views/index.html",
 					"settings":
 					{
-						"buffer_size": 4556,
+						"buffer_size": 2331,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								525,
-								525
+								1209,
+								1209
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 345.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"settings":
+					{
+						"buffer_size": 1632,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								14
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/G/coding/git/fyp/static/js/controllers/RepoCtrl.js",
+					"settings":
+					{
+						"buffer_size": 23019,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3280,
+								3280
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1985.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/G/coding/git/fyp/views/partials/repo.html",
+					"settings":
+					{
+						"buffer_size": 4886,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1101,
+								1101
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

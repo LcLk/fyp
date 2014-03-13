@@ -1,0 +1,67 @@
+<div id="import" data-ng-controller="RepoImportCtrl">
+	<h4 class="greyTitle">Converting Your data</h4>
+
+	<div class="box">
+		
+	</div>
+
+
+
+	<div class="row form-group" data-ng-class="{'highlight': (currentStep == 1)}" ng-click="currentStep = 1">
+		<label class="stepLabel" >1. Upload File</label>
+		<div class="row form-inline" >
+	    <label for="import_email">Email Address</label>
+			<input type="email" id="import_email" name="address" ng-model="upload.email" class="form-control" placeholder=" email address">
+		</div>
+		<br/>
+		<div class="row form-inline" >
+			<label for="import_email">Upload Data</label>
+			<input type="file" ng-file-select="selectFile($files)" >
+		</div>
+		<br/>
+		<div class="row form-inline" >
+	    <button type="submit" class="btn btn-primary" ng-click="uploadFile()">Upload</button>
+		</div>	
+	</div>	
+
+	<div class="row form-group" data-ng-class="{'highlight': (currentStep == 2)}" ng-click="currentStep = 2">
+		<label class="stepLabel" >2. Verify Data</label>
+		<table class="table table-striped">
+			<tr>
+				<th>Frequency</th>
+				<th>Permittivity</th>
+				<th>Conductivity</th>
+			</tr>
+			<tr>
+				<td>
+					<select class="form-control" ng-options="k.col as k.name for k in data.head" ng-model="columns.f"></select>
+				</td>
+				<td>
+					<select class="form-control" ng-options="k.col as k.name for k in data.head" ng-model="columns.p"></select>
+				</td>
+				<td>
+					<select class="form-control" ng-options="k.col as k.name for k in data.head" ng-model="columns.c"></select>
+				</td>
+			</tr>
+			<tr ng-repeat="row in data.lines">
+				<td>{{row[columns.f]}}</td>
+				<td>{{row[columns.p]}}</td>
+				<td>{{row[columns.c]}}</td>
+			</tr>
+
+		</table>
+	</div>	
+
+	<div class="row form-group" data-ng-class="{'highlight': (currentStep == 3)}" ng-click="currentStep = 3">
+		<label class="stepLabel" >3. Verify Email</label>
+		<div class="row form-inline" >
+	    <label for="import_key">Pass Key</label>
+			<input type="email" id="import_key" ng-model="upload.key" class="form-control" placeholder=" pass key">
+		</div>
+		<br/>
+		<div class="row form-inline" >
+	    <button type="button" class="btn btn-primary" ng-click="convertFile()">Begin Conversion</button>
+		</div>	
+
+
+	</div>

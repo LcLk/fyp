@@ -1,0 +1,103 @@
+
+<div id="repo">
+	<!-- Control Panel for generating data -->
+	<div class="control_panel_container">
+		<h3><b>Using the Repository</b></h3>
+		<p>The repository contains datasets for modeling dielectric properties of human tissues. You can select the datasets, tissue samples, frequency range and steps. The data can be graphed or downloaded. If clarification is needed for any steps, hovering over any input fields will give specific information. </p><br>
+			<div class="title row"><h4><b>Repository Control Panel</b></h4></div>
+		<div id="control_panel" class="container">
+			<div class="row">
+				<div class="col-md-3" >
+
+					<div class="form-group">
+						<label title="">Select Datasets to model</label>
+						<div class="checkbox row form-inline" ng-repeat="(k,v) in datasets">
+						    <label class="col-md-4">
+								<input type="checkbox"  ng-model="v.selected">{{k}}  
+						    </label>
+						    <span class="col-md-6 col-md-offset-1 form-inline"> poles:
+						    	<select ng-options="pole for pole in selectable_poles[k].poles" class="poles-select" ng-model="v.pole" ng-disabled="selectable_poles[k].disabled" >
+					    		</select>
+					    	</span>		
+						</div>
+					</div>
+
+					<div class="form-group">
+					  <label for="form_lowfreq">Select Lower Frequency Bound</label>
+						<select id="form_lowfreq" ng-model="selected.startFreq" ng-options="f.value as f.key for f in frequencies" class="form-control input-sm">
+						</select>
+					</div>
+					<div class="form-group">
+					  <label for="form_highfreq">Select Upper Frequency Bound</label>	
+						<select id="form_highfreq" ng-model="selected.stopFreq" ng-options="f.value as f.key for f in frequencies" class="form-control input-sm">
+						</select>
+					</div>
+					<div class="form-group">
+					  <label for="form_decade">Enter Points per Decade</label>	
+					  <input type="number" class="form-control" id="form_decade" placeholder="Select Points per Decade" ng-model="selected.pointsPerDecade"> 
+					</div>
+
+					<div class="form-group">
+						<div class="form-group">
+							<button type="button" ng-Click="model_data()" class="btn btn-primary btn-lg">Generate Graph</button>
+							<button type="button" ng-Click="reset()" class="btn btn-danger btn-lg">Clear Settings</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Selecting Tissue(s) -->
+				<div class="col-md-3 col-md-offset-1">
+					<label title="">Select Tissues to model</label>
+					<div class="tissue_scroll container">
+						<div class="row" ng-repeat="tissue in tissues_sorted">
+						    <label ng-class="{disabled: tissues[tissue].disabled, checkbox: true}">
+								<input type="checkbox"   ng-model="tissues[tissue].selected" ng-disabled="tissues[tissue].disabled" >{{tissue}}
+						    </label>
+						</div>
+					</div>
+				</div>
+
+				<!-- Export panel -->
+				<div class="col-md-3 col-md-offset-1">
+					<label title="if multiple tissues are selected the file will be a zipped folder">Export Data</label><br>
+				    <label for="form_export_format">Select Export Format</label>
+					<select id="form_export_format" ng-model="export.selected.format" class="form-control input-sm" >
+						    <option ng-repeat="v in export.formats" ng-disabled="v.disabled" value="{{v.name}}">{{v.name}}</option>
+					</select>
+					<br>
+					<div class="form-group">
+						<button type="button" ng-Click="exportData()" class="btn btn-primary btn-lg">Generate File(s)</button>
+						<a type="button" href="{{export.url}}" class="btn btn-primary btn-lg" ng-disabled="!export.file_ready" target="_blank">Download</a>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+
+
+	<!-- Output area for graphs and tables -->
+	<div class="output">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="title row text-left"><h4> Permittivity Graph</h4>
+                    	<button type="button" class="btn btn-info btn-xs" ng-model="visible.permittivity" value="true" ng-click="visible.permittivity = !visible.permittivity">{{visible.permittivity && 'Hide ' || 'Show'}}</button>
+                    </div>
+					<div id="permittivity_container" class="graph" ng-show="visible.permittivity"></div>
+				</div>
+				<div class="col-md-6">
+					<div class="title row text-left"><h4> Conductivity Graph</h4>
+                    	<button type="button" class="btn btn-info btn-xs" ng-model="visible.conductivity" value="true" ng-click="visible.conductivity = !visible.conductivity">{{visible.conductivity && 'Hide ' || 'Show'}}</button>
+                    </div>
+					<div id="conductivity_container" class="graph" ng-show="visible.conductivity"></div>
+				</div>
+			</div>
+			<br/>
+			<div class="row" ng-repeat="(name,table) in tables">
+				<div class="col-md-12">
+					<calculated-data-table data="table.tableData" visible="table.visible" name="name"></calculated-data-table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

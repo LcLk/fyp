@@ -1,0 +1,182 @@
+.titleBar {
+	color: #fff;
+	background-color: #166E91;
+	font-weight: bolder;
+	font-size: 15px;
+	padding: 3px 30px;
+	width: 100%;
+}
+.content {
+	padding: 0 2px 10px 2px;
+	position: relative;
+	margin: 0px 0px;
+	height:100%;
+}
+
+.controlPanel {
+	padding: 10px 0 30px 0;
+	top:20px;
+	background-color: #FFF;
+}
+.controlPanelTitle {
+	margin-left: 30px;
+	font-weight: bolder;
+	font-size: 16px;
+	color:#0E4D57;
+}
+
+.highlight {
+  	background-color: #F7F7F7;
+}
+.instructions {
+	background-color: #F7F7F7;	
+	border-radius: 10px;
+	padding: 5px 10px;
+	height:100%;
+	transition: all 0.5s ease;
+}
+#ngview .form-group {
+	border-radius: 10px;
+	border:2px solid #F7F7F7;
+	transition: all 0.5s ease;
+	padding: 15px 10px;
+	margin-bottom: 25px;
+}
+.stepLabel {
+	padding:0 0 3px 15px;
+	font-size: 14px;
+	color:#0E4D57;
+}
+.title {
+  position: relative;
+  width: 100%;
+  color:white;
+  height: 30px;
+  margin-top: 30px;	
+  background-color: #166E91;
+  text-align: left
+}
+.title h4 {
+  margin:2px 20px;
+  line-height: 30px;
+  margin-left:50px;
+  float: left;
+}
+.title .btn {
+  right:20px;
+  float: right;
+  margin:4px 10px 0 0;
+}
+select.poleSelect {
+	padding: 4px 1px;
+	min-width: 50px;
+}
+
+.tissue_scroll.container {
+  overflow: auto;
+  height: 300px;
+  width:auto !important;
+  padding-left: 10px;
+  background-color: #FEFEFE;
+}
+.relativeContainer {
+	position: relative;
+}
+.graph {
+	display: block;
+	width:auto;
+	margin:30px;
+	height:auto;
+	overflow: visible;
+	transition: height 2s ease;
+}
+.graph.hidden {
+	height:0px;
+}
+
+/*Overwriting some conflicting Bootstrap values*/
+.container {
+	width:790px !important;
+}
+.form-control {
+	padding: 0 !important;
+}
+.form-group {
+	padding:3px 10px;
+}	
+#leftColumn a,
+#leftColumn a:hover{
+	color:#000;
+	text-decoration: none;
+}
+
+#leftColumn a.selected,
+#leftColumn a.selected:hover{
+	color:#FFF;
+	text-decoration: none;
+}
+
+
+#ref .refTitle {
+	padding: 5px 0 0 10px;
+	margin: 0 2px;
+	background-color: #C8C8C8;
+	transition: background-color 1s ease;
+}
+#ref .selected .refTitle{
+	background-color: #B1CDE0;	
+}
+#ref .refContent {
+	padding: 2px 20px
+}
+#ref .refBox {
+	margin: 20px 0 20px 2px;
+	padding: 2px;
+}
+#ref .refBox.selected {
+	border: 1px dotted black;
+}
+
+input[type=checkbox][disabled] {
+  text-decoration: line-through;
+  color: #DBDBDB;
+}
+label.disabled {
+  text-decoration: line-through;
+  color: #DBDBDB;
+}
+
+div.box {
+	text-indent: 30px;
+	margin:0 2px 20px ;
+	padding: 2px 5px;
+}
+
+h4.greyTitle {
+	text-indent: 30px;
+	width: 100%;
+	border-bottom: 1px solid #166E91;
+	color: #166E91;
+	font-weight: bold;
+	margin-top: 40px;
+}
+
+	
+p {
+	text-indent: 20px;
+}
+
+
+.tooltip:hover:after{
+    display:block;
+    position:absolute;
+    top:1em;
+    left:1.5em;
+    padding: 0.2em 0.6em;
+    background-color:#000;
+    color:#FFF;
+}
+#import .form-group{
+
+	margin: 20px 10px;
+}

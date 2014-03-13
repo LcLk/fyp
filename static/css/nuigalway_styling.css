@@ -1,0 +1,265 @@
+/*
+	Copyright 2014 Liam Krewer
+	Derived from the standard css for NUI Galway website and affiliate websites:
+		http://www.eee.nuigalway.ie/css/main.css 
+		and
+		http://www.eee.nuigalway.ie/css/fac_dept.css
+	Optimised layout and reduced image usage.
+*/
+
+/* Styles for element tags*/
+a {
+	color: #666;
+	text-decoration: none;
+}
+a:hover {
+	color: #666;
+	text-decoration: none;
+}
+body {
+    background-color: #FCFCFC;
+    border: 0 none;
+    color: #666;
+    font-family: Arial,Helvetica,Verdana,sans-serif;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Styles for IDs*/
+
+#bannerImage {
+	height: 110px;
+	width:1000px;
+	background-image: url("/static/img/new_banner4.png");
+}
+#breadCrumb {
+	height:30px;
+	color: #FFF;
+	margin:5px 0;
+	font-weight: bold;
+}
+#changeable {
+}
+#container {
+	background-color: #fff;
+    border: 1px solid #DDDDDD;
+    margin: 5px auto;
+    text-align: left;
+    width: 1000px;
+}
+#contentColumn {
+	float: left;
+	width:790px;
+	height:auto;
+	padding:5px 5px 10px 0;
+	margin-left:5px;
+	overflow: hidden;
+	transition: height 1s ease;
+	border-left: 1px dotted #C6C6C6;
+}
+#footerLeft {
+	float:left;
+	width:200px;
+	height: 30px;
+	margin:10px 2px ;
+	background-color: #C8C8C8;
+}
+#footerRight {
+	float:right;
+	width:780px;
+	height: 20px;
+	margin:10px 2px ;
+	padding:5px ;
+	background-color: #C8C8C8;
+}
+#leftBreadcrumb {
+	float:left;
+	text-align: right;
+	padding:5px 2px;
+	height:20px;
+	width:196px;
+	background-color: #68075A;
+}
+#leftColumn {
+	float:left;
+	width:192px;
+  background-color: #fff;
+  padding: 5px 2px;
+}
+#logo {
+	margin:20px 0 0 20px;
+}
+#navigation {
+	width:192px;
+	overflow: hidden;
+	transition: all 0.5s ease 0.3s;
+}
+#mainColumn {
+	width:790px;
+}
+#rightBreadcrumb {
+	position: relative;
+	margin-left:202px;
+	padding:5px 0 5px 10px;
+	height:20px;
+	width: 785px;
+	text-align: left;
+	background-color: #68075A;	
+}
+#topBar {
+	font-size: 11px;
+	color: #555;
+	height: 30px;
+	padding: 8px 8px 0 8px;
+	border-bottom: 1px dotted #C6C6C6;
+}
+#valid {
+	font-size: 1em;
+	text-align: center;
+}
+
+
+
+/* Styles for Classes*/
+.at {
+	background:	url("http://www.nuigalway.ie/images/at.gif") no-repeat center;
+	content: "";
+	padding:5px 5px 6px;
+	margin:2px 2px 0;
+}
+.clear {
+	clear:both;
+}
+.clickable {
+	cursor: pointer;
+}
+.floatLeft {
+	float:left;
+}
+.floatRight {
+	float:right;
+}
+
+
+/* Combined Styles by parent*/
+#footerRight a {
+	margin:5px 4px;
+}
+#footerRight a:hover {
+	text-decoration: underline;
+}
+#leftColumn a.nav {
+	width: 178px;
+	padding: 5px 10px 0;
+	display: block;
+	background-color: #E6DCDB;
+	transition:all ease 0.2s;
+}
+
+#leftColumn a.nav:hover {
+	background-color: #BB9E9C;
+	font-weight: bold;
+	margin-left:20px;
+	width:158px;
+}	
+#leftColumn a.nav.home {
+	background-color: #68075A;
+	font-weight: bold;	
+	color: #FFF;
+}
+#leftColumn a.nav.submenu {
+	width:160px;
+	background-color: #F2EDED;
+	padding: 2px 10px 2px 28px;
+}
+#leftColumn a.nav.submenu:hover {
+	background-color: #E6DCDB;
+}
+#leftColumn a.nav.selected {
+	background-color: #555555;
+	border-bottom: 2px solid #c5c5c5;
+	color: #FFF;
+}
+#leftColumn a.nav.selected:hover {
+	background-color: #555555;
+}
+
+#rightBreadcrumb a{
+	color: #FFF;
+}
+#rightBreadcrumb a:hover{
+	color: #FFF;
+	text-decoration: underline;
+}
+#rightBreadcrumb img {
+	margin-top:-5px;
+	float:right;
+}
+#topBar span {
+	margin:0 4px;
+}
+#topBar span .icon {
+	cursor: pointer;
+	padding-left:2px;
+	font-size: 10px;
+	font-weight: bold;
+	font-family: Times New Roman;
+	border: 1px solid #c6c6c6;
+}
+#topBar span .icon.zoom {
+	text-align: center;
+	width:8px;
+	height: 12px;
+	padding: 0 2px ;
+	font-weight: bolder;
+	margin: 1px 2px ;
+	display: inline-block;
+	border-radius: 50%;
+}
+
+/* Animations */
+
+#ngview {
+    width:790px;
+}
+
+#ngview.ng-enter 		{ 
+    transition: opacity 0.5s ease 0.5s;
+	z-index: 8888; 
+	opacity: 0;
+}
+#ngview.ng-leave 		{ 
+    transition: opacity 0.5s ease;
+	z-index: 9999; 
+	opacity: 1;
+}
+#ngview.ng-enter-active{
+	opacity: 1;
+}
+#ngview.ng-leave-active{
+	opacity: 0;
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+	from 	{ transform:translateX(100%); }
+	to 		{ transform: translateX(0); }
+}
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+	from 	{ transform:translateY(100%); }
+	to 		{ transform: translateY(0); }
+}
+
+#navigation.fixed{
+	position: fixed;
+	top:0;
+	z-index: 1;
+}
+#navigation.regular{
+	position: relative;
+}
+

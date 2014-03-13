@@ -1,15 +1,50 @@
-'use strict';
+'use strict'; 
 
 /* Directives */
 
-angular.module('app.directives', []).
-  directive('appVersion', function (version) {
-    return function(scope, elm, attrs) {
-      elm.text(version);
-    };
-  })
-  //directive for creating a table of calculated data
-  .directive('calculatedDataTable',function ($timeout) {
+angular.module('app.directives', [])
+.directive('appVersion', function (version) {
+  return function(scope, elm, attrs) {
+    elm.text(version);
+  };
+})
+
+
+.directive( 'heightsReflow', function(){
+    return {
+        restrict: 'A',
+        link: function( scope, elem, attrs ){
+            attrs.$observe( 'height', function(){
+              console.log(elem);
+              elem[0].parentElement.style.height = (elem[0].scrollHeight+150) + 'px';
+            } );
+        }
+    }
+} )
+
+.directive( 'scrollAlong', function($window){
+    return {
+        restrict: 'A',
+        link: function( scope, elem, attrs ){
+
+            var window = angular.element($window),
+                newOffset = 0,
+                previousOffset = 0;           
+            window.bind('scroll', function() { 
+              newOffset = parseInt($(window).scrollTop())-150;
+              if(newOffset < 150)
+                newOffset = 0;
+              previousOffset = newOffset;
+              elem[0].style.marginTop = newOffset + 'px';
+            });
+        }
+    }
+} )
+
+
+
+//directive for creating a table of calculated data
+.directive('calculatedDataTable',function ($timeout) {
   return {
       restrict: 'E',   //turns the directive into a tag
       scope: {       
@@ -53,7 +88,9 @@ angular.module('app.directives', []).
         },true);
       }
     };
-}).directive('loading', function($timeout) {
+})
+
+.directive('loading', function($timeout) {
     return {
       restrict: 'A',
       template:  '<span>{{dots}}<span>',
@@ -83,3 +120,5 @@ angular.module('app.directives', []).
       replace: true
     }
 });
+
+console.log("Directives loaded");

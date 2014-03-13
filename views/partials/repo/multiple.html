@@ -1,0 +1,86 @@
+<div data-ng-controller="RepoMultipleCtrl" class="container content">
+	<br />
+	<h4 class="greyTitle">Graphing Multiple Tissues</h4>
+	<div class="box">
+		This page is for comparing the permittivity and conductivity of various tissue samples rather than comparing the various datasets.
+	</div>
+
+	<h4 class="greyTitle">Control Panel</h4>
+	<div class="controlPanel row">
+		<div class="col-md-6 col-lg-6 col-small-8">
+			<div class="row form-group step1" data-ng-class="{'highlight': (currentStep == 1)}" ng-click="currentStep = 1">
+				<label class="stepLabel" >1. Select Dataset to model</label>
+				<div class="row form-inline" >
+				    <label class="col-md-5 form-inline">Dataset:
+						<select id="form_dataset" data-ng-model="settings.dataset.selected" ng-options="k as k for (k,v) in datasets" class="form-control input-sm">
+						</select>
+					</label>
+				    <label class="col-md-2 form-inline"> Poles:
+				    	<select data-ng-options="pole for pole in selectable_poles[settings.dataset.selected].poles" class="poleSelect" data-ng-model="settings.dataset.poles" data-ng-disabled="!settings.dataset.selected" >
+			    		</select>
+			    	</label>		
+				</div>
+			</div>
+			<br />
+
+			<div class="row form-group step2" data-ng-class="{'highlight': (currentStep == 2)}" ng-click="currentStep = 2">
+					<label class="stepLabel" >2. Select Tissues</label>
+					<div class="tissue_scroll container">
+						<div class="row" ng-repeat="t in tissues_sorted">
+						    <label ng-class="{disabled: tissues[t].disabled, checkbox: true}" title="{{'Krewer poles available: '+tissues[t].Krewer.poles_available.join()}}">
+									<input type="checkbox"  ng-model="tissues[t].selected" ng-disabled="tissues[t].disabled" >{{t}}
+						    </label>
+						</div>
+					</div>
+			</div>
+			<br />
+			<div class="row form-group step3" data-ng-class="{'highlight': (currentStep == 3)}" ng-click="currentStep = 3">
+				<label class="stepLabel" >3. Set Frequency Parameters</label>
+				<label for="form_lowfreq">Lower Frequency Bound</label>
+				<select id="form_lowfreq" ng-model="settings.frequency.start" ng-options="f.value as f.key for f in frequencies" class="form-control input-sm">
+				</select>
+				<label for="form_highfreq">Upper Frequency Bound</label>	
+				<select id="form_highfreq" ng-model="settings.frequency.stop" ng-options="f.value as f.key for f in frequencies" class="form-control input-sm">
+				</select>
+				<label for="form_decade">Points per Decade</label>	
+				<input type="number" class="form-control" id="form_decade" placeholder="Select Points per Decade" min="1" max="20" step="1" size="10" ng-model="settings.frequency.steps"> 
+			</div>
+			<br />
+			<div class="row form-group step4" data-ng-class="{'highlight': (currentStep == 4)}" ng-click="currentStep = 4">
+				<label class="stepLabel" >4. Set Graph Parameters</label>
+				<label for="form_axis">Axis Type</label>
+				<select id="form_axis" class="form-control input-sm" ng-model="settings.graph.axis" ng-options="a for a in graph.axis" >
+				</select>
+			</div>
+			<br />
+			<div class="row form-group step5" data-ng-class="{'highlight': (currentStep == 5)}" ng-click="currentStep = 5">
+				<label class="stepLabel" >5. Graph or Retry</label>
+  				<fieldset >
+					<button type="button" ng-Click="model_data()" ng-disabled="!formValidated" class="btn btn-primary btn-md">Generate Graph</button>
+					<button type="button" ng-Click="reset()" class="btn btn-danger btn-md">Clear Settings</button>
+  				</fieldset>
+			</div>
+			<br />
+		</div>
+		<div class="col-md-5 col-lg-5 col-small-3">
+			<div id="instructions" class="instructions" ng-bind-html="instructions[currentStep-1]">
+			</div>
+		</div>
+	</div>
+
+	<br />
+	<br />
+	<div >
+		<div class="title row text-left">
+			<h4> Conductivity Graph</h4>
+			<button type="button" class="btn btn-info btn-xs" ng-model="visible.conductivity" value="true" ng-click="visible.conductivity = !visible.conductivity">{{visible.conductivity && 'Hide ' || 'Show'}}</button>
+	    </div>
+		<div id="conductivity_container" class="graph" ng-class="{' hidden': !visible.conductivity}"></div>
+
+		<div class="title row text-left">
+			<h4> Permittivity Graph</h4>
+	    	<button type="button" class="btn btn-info btn-xs" ng-model="visible.permittivity" value="true" ng-click="visible.permittivity = !visible.permittivity">{{visible.permittivity && 'Hide ' || 'Show'}}</button>
+	    </div>
+		<div id="permittivity_container" class="graph" ng-class="{' hidden': !visible.permittivity}"></div>		
+	</div>
+</div>

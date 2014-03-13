@@ -39,27 +39,12 @@ template {
   display: none;
 }
 
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-}
-
 body {
   margin: 0;
 }
 
 a {
   background: transparent;
-}
-
-a:focus {
-  outline: thin dotted;
-}
-
-a:active,
-a:hover {
-  outline: 0;
 }
 
 h1 {
@@ -82,8 +67,6 @@ dfn {
 
 hr {
   height: 0;
-  -moz-box-sizing: content-box;
-       box-sizing: content-box;
 }
 
 mark {
@@ -294,9 +277,6 @@ table {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 html {
@@ -781,8 +761,6 @@ pre code {
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -808,8 +786,6 @@ pre code {
 }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
 }
 
 .row:before,

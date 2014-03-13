@@ -55,7 +55,7 @@ function getKrewers(){
 	var tissues = [],
 		ids = req.params.method.split(",");
 	console.log("getting Krewer tissues");
-	models.Gabriel.find( {'_id': { $in: ids}})
+	models.Krewer.find( {'_id': { $in: ids}})
 					.exec( function(err,krewers){
     	if(err){
     		console.log("error");
@@ -133,12 +133,28 @@ function getTissueList(){
 
 
 exports.homepage = function(req, res){
+	console.log("home");
   res.sendfile('./views/index.html');
 };
 
 exports.partials = function (req, res) {
+	console.log("partials");
   var name = req.params.name;
+  console.log(name);
   res.sendfile('./views/partials/' + name +'.html');
+};
+exports.partials_repo = function (req, res) {
+  console.log("repo");
+  var name = req.params.name;
+  console.log(name);
+  res.sendfile('./views/partials/repo/' + name +'.html');
+};
+
+exports.partials_other1 = function (req, res) {
+	console.log("other1");
+  var name = req.params.name;
+  console.log(name);
+  res.sendfile('./views/partials/other1/' + name +'.html');
 };
 
 /*exports.api = function(req, res){
