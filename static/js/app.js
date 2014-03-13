@@ -17,7 +17,6 @@ config(function ($routeProvider, $locationProvider) {
   $routeProvider.
     when('/home', {
       templateUrl: '/views/partials/home.html',
-      controller: 'HomeCtrl',
       title: "Home"
     }).
     when('/repo/:page',{
@@ -31,17 +30,14 @@ config(function ($routeProvider, $locationProvider) {
     }).
     when('/other1', {
       templateUrl: '/views/partials/other1.html',
-      controller: 'HomeCtrl',
       title: "Other Page"
     }).
     when('/other2', {
       templateUrl: '/views/partials/other2.html',
-      controller: 'HomeCtrl',
       title: "Other Page 2"
     }).
     when('/other3', {
       templateUrl: '/views/partials/other3.html',
-      controller: 'HomeCtrl',
       title: "Other Page 3"
     }).
     otherwise({

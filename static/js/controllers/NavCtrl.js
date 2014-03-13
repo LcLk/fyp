@@ -54,11 +54,6 @@ angular.module('app.controllers').controller('NavCtrl', function ($window,$scope
     	{name: "Accessibility",link: "/accessibility.html"}
     ];
 
-    $scope.scrollToZero = function(){
-      $('#navigation')[0].style.marginTop = '0px';
-      return true;
-    }
-
     $scope.isActive = function(path) {
     	var regex = new RegExp("^"+path,"i");
     	if ($location.path().substr(0, path.length).match(regex) != null)
