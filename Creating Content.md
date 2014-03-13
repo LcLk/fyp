@@ -1,3 +1,9 @@
+Running the Website
+===================
+
+First install the Node Package Manager
+
+
 Creating Pages on the repository
 ================================
 

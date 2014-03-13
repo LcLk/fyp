@@ -29,8 +29,8 @@
   "dependencies": {
     "express": "3.4.x",
     "debug": "0.7.x",
-    "mysql": " 1.2.x",
-    "nodemailer": "0.7",
+    "mysql": "2.1.x",
+    "nodemailer": "0.6.x",
     "mongoose": "3.8",
     "adm-zip": "0.4",
     "companion": "0.0.2"
