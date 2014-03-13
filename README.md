@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Running the Website
 ===================
 
@@ -21,3 +22,9 @@ Creating Pages on the repository
 
 
 ![alt text](./readme_assets/nav_menu.png "Navigation Menu")
+=======
+fyp
+===
+
+nuig-final-year-project
+>>>>>>> 4e683cf464bf8996e6cacd1153a6a1ada65a8c62
