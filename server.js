@@ -41,13 +41,13 @@ if("OPENSHIFT_NODEJS_IP" in process.env){
 		process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
 		process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
 		process.env.OPENSHIFT_APP_NAME;
-	}
 	mysqlOptions = {
 	  host     : process.env.OPENSHIFT_MYSQL_DB_HOST,
 	  port 		 : process.env.OPENSHIFT_MYSQL_DB_PORT,
 	  user     : process.env.OPENSHIFT_MYSQL_DB_USERNAME,
 	  password : process.env.OPENSHIFT_MYSQL_DB_PASSWORD
 	}
+}
 else {
 	//otherwise assume running locally in test environment
 	app.ipaddress = "127.0.0.1";
