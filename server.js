@@ -28,8 +28,6 @@ var mysqlOptions = {
   user     : 'root',
   password : 'mm,.kim.,m.jkk'
 };
-console.log("environment vars");
-console.log(process.env);
 
 //running on OpenShift?
 if("OPENSHIFT_NODEJS_IP" in process.env){
@@ -54,6 +52,8 @@ else {
 	app.port = "3000";
 }
 
+//NOTE: if running without DBs, comment out from here until //NOTE END comment
+
 //connect to DBs with environment variables
 mongoose.connect(mongoOptions, function(err) {
 	console.log(err);
@@ -63,6 +63,8 @@ mySQLConnection = mysql.createConnection(mysqlOptions);
 mySQLConnection.connect(function(err) {
 	if (err)	console.log("error connecting to mysql \n",err);
 });
+
+//NOTE END
 
 /*
 Define Middlewares
