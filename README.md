@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Running the Website
 ===================
 
@@ -28,9 +27,6 @@ Creating Pages on the repository
 1. Add the new page to the nav menu:
 
 ![nav menu screenshot](./readme_assets/nav_menu.png "Navigation Menu")
-=======
-fyp
-===
 
 1.	This corresponds to the `$scope.menu` object in the __NavCtrl.js__ (static/js/controllers/NavCtrl.js)
 		To create a new single page simply follow this format:
