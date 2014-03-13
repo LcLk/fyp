@@ -21,7 +21,13 @@ nodemailer 		= require('nodemailer');
 /*
 Environment Variables
 */
-var mongo_connect_string = 'mongodb://localhost/test';
+var mongoOptions = 'mongodb://localhost/test';
+var mysqlOptions = {
+  host     : '127.0.0.1',
+  port 		 : '3306',
+  user     : 'root',
+  password : 'mm,.kim.,m.jkk'
+};
 console.log("environment vars");
 console.log(process.env);
 
@@ -29,34 +35,31 @@ console.log(process.env);
 if("OPENSHIFT_NODEJS_IP" in process.env){
 	app.ipaddress = process.env.OPENSHIFT_NODEJS_IP;
 	app.port      = process.env.OPENSHIFT_NODEJS_PORT;
-	mongo_connect_string = 'mongodb://' + 
+	mongoOptions= 'mongodb://' + 
 		process.env.OPENSHIFT_MONGODB_DB_USERNAME + ':' + 
 		process.env.OPENSHIFT_MONGODB_DB_PASSWORD + '@' +
 		process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
 		process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
 		process.env.OPENSHIFT_APP_NAME;
-}
+	}
+	mysqlOptions = {
+	  host     : process.env.OPENSHIFT_MYSQL_DB_HOST,
+	  port 		 : process.env.OPENSHIFT_MYSQL_DB_PORT,
+	  user     : process.env.OPENSHIFT_MYSQL_DB_USERNAME,
+	  password : process.env.OPENSHIFT_MYSQL_DB_PASSWORD
+	}
 else {
 	//otherwise assume running locally in test environment
 	app.ipaddress = "127.0.0.1";
 	app.port = "3000";
-
-
-	mySQLConnection = mysql.createConnection({
-	  host     : '127.0.0.1',
-	  port 		 : '3306',
-	  user     : 'root',
-	  password : 'mm,.kim.,m.jkk'
-	});
 }
 
-//connect to mongo db depending on environment
-mongoose.connect(mongo_connect_string, function(err) {
+//connect to DBs with environment variables
+mongoose.connect(mongoOptions, function(err) {
 	console.log(err);
     if (err) console.log("error connecting to mongo \n",err);
 });	
-
-//connect to mysql db
+mySQLConnection = mysql.createConnection(mysqlOptions);
 mySQLConnection.connect(function(err) {
 	if (err)	console.log("error connecting to mysql \n",err);
 });
