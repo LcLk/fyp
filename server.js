@@ -1,6 +1,5 @@
 
 /*
-NodeJS server application for OpenShift using express
 */
 self 					= this;
 express 			= require('express');
@@ -23,7 +22,8 @@ nodemailer 		= require('nodemailer');
 Environment Variables
 */
 var mongo_connect_string = 'mongodb://localhost/test';
-
+console.log("environment vars");
+console.log(process.env);
 
 //running on OpenShift?
 if("OPENSHIFT_NODEJS_IP" in process.env){
