@@ -33,7 +33,7 @@ var mysqlOptions = {
 };
 
 app.ipaddress = "127.0.0.1";
-app.port = "3000";
+app.port = process.env.DEBYE_PORT || "3000";
 
 
 //NOTE: if running without DBs, comment out from here until //NOTE END comment
