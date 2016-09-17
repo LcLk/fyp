@@ -1,0 +1,15 @@
+[Unit]
+Description=Debye
+
+[Service]
+ExecStart=usr/bin/nodejs /home/finnk/debye/server.js
+Restart=always
+User=nobody
+Group=nogroup
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+Environment=DEBYE_PORT=4242
+WorkingDirectory=/home/finnk/Debye
+
+[Install]
+WantedBy=multi-user.target
