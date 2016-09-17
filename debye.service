@@ -2,7 +2,7 @@
 Description=Debye
 
 [Service]
-ExecStart=usr/bin/nodejs /home/finnk/debye/server.js
+ExecStart=usr/bin/node /home/finnk/debye/server.js
 Restart=always
 User=nobody
 Group=nogroup
