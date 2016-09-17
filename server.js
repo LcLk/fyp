@@ -3,6 +3,9 @@
 */
 self 					= this;
 express 			= require('express');
+compression   = require('compression');
+bodyParser    = require('body-parser');
+methodOverride= require('method-override');
 app 					= express();
 debug 				= require('debug')('http');
 fs 						= require('fs');
@@ -29,28 +32,9 @@ var mysqlOptions = {
   password : 'mm,.kim.,m.jkk'
 };
 
-//running on OpenShift?
-if("OPENSHIFT_NODEJS_IP" in process.env){
-	app.ipaddress = process.env.OPENSHIFT_NODEJS_IP;
-	app.port      = process.env.OPENSHIFT_NODEJS_PORT;
-	mongoOptions= 'mongodb://' + 
-		process.env.OPENSHIFT_MONGODB_DB_USERNAME + ':' + 
-		process.env.OPENSHIFT_MONGODB_DB_PASSWORD + '@' +
-		process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
-		process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
-		process.env.OPENSHIFT_APP_NAME;
-	mysqlOptions = {
-	  host     : process.env.OPENSHIFT_MYSQL_DB_HOST,
-	  port 		 : process.env.OPENSHIFT_MYSQL_DB_PORT,
-	  user     : process.env.OPENSHIFT_MYSQL_DB_USERNAME,
-	  password : process.env.OPENSHIFT_MYSQL_DB_PASSWORD
-	}
-}
-else {
-	//otherwise assume running locally in test environment
-	app.ipaddress = "127.0.0.1";
-	app.port = "3000";
-}
+app.ipaddress = "127.0.0.1";
+app.port = "3000";
+
 
 //NOTE: if running without DBs, comment out from here until //NOTE END comment
 
@@ -58,11 +42,11 @@ else {
 mongoose.connect(mongoOptions, function(err) {
 	console.log(err);
     if (err) console.log("error connecting to mongo \n",err);
-});	
-mySQLConnection = mysql.createConnection(mysqlOptions);
-mySQLConnection.connect(function(err) {
-	if (err)	console.log("error connecting to mysql \n",err);
 });
+// mySQLConnection = mysql.createConnection(mysqlOptions);
+// mySQLConnection.connect(function(err) {
+// 	if (err)	console.log("error connecting to mysql \n",err);
+// });
 
 //NOTE END
 
@@ -73,7 +57,7 @@ Define Middlewares
 //DON'T PLACE ANY APP.USE CALLS ABOVE COMPRESS.
 
 //send static data compressed with gzip.
-app.use(express.compress());
+app.use(compression());
 
 //serve static files from the public directory (relative to the current directory by using the '__dirname' var)
 //the '{ maxAge: 86400000 }' part sets the client to cache static content for up to one day (or 86400000ms)
@@ -81,14 +65,14 @@ app.use('/static', express.static(__dirname + '/static', { maxAge: 86400000 }));
 app.use('/views', express.static(__dirname + '/views', { maxAge: 86400000 }));
 
 
-//parses the post body of requests into request.body 
-app.use(express.bodyParser());
+//parses the post body of requests into request.body
+app.use(bodyParser());
 
 //allows using PUT and DELETE along with GET and POST requests
-app.use(express.methodOverride());
+app.use(methodOverride());
 
 //allows defining of routes and routing variables
-app.use(app.router);
+// app.use(app.router);
 
 
 /*
@@ -101,7 +85,7 @@ app.get('/', router.homepage)
 app.get('/pages/repo/:name', router.partials_repo);
 app.get('/pages/other1/:name', router.partials_other1);
 app.get('/pages/:name', router.partials);
-//api functions 
+//api functions
 app.post('/api/export/:format', exporter.main);
 app.post('/api/upload/:method', importer.upload);
 app.get('/api/:controller/:method', router.api);
@@ -111,5 +95,5 @@ app.get('/*', router.homepage);
 /*
 *	run server
 */
-app.listen(app.port,app.ipaddress);	
+app.listen(app.port,app.ipaddress);
 

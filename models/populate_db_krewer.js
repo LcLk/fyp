@@ -11,24 +11,11 @@ process.argv.forEach(function (val, index, array) {
 });
 console.log("\n");
 
-
-//if ran as "node populate_db.js test" then connect to test db, otherwise connect to openshift's mongodb instance
-if(process.argv[2] == "test"){
-	mongoose.connect('mongodb://localhost/test');
-}
-else {
-	mongo_connect_string = 'mongodb://' + 
-			process.env.OPENSHIFT_MONGODB_DB_USERNAME + ':' + 
-			process.env.OPENSHIFT_MONGODB_DB_PASSWORD + '@' +
-			process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
-			process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
-			process.env.OPENSHIFT_APP_NAME;
-	mongoose.connect(mongo_connect_string);
-}
+mongoose.connect('mongodb://localhost/test');
 
 
 /*
-	Below are functions to read from files to populate the DB, 
+	Below are functions to read from files to populate the DB,
 	followed by the functions being called to populate the entire DB from scratch, or load in files which aren't already in the DB
 	They are synchronous to produce more meaningful logs
 */
@@ -46,7 +33,7 @@ function findKrewerFiles(callback){
 		if(files_left.length == 0) callback();
 		name = files_left.pop();
 		console.log("\n Creating  \""+ name + "\"");
-		//this update function is an upsert (update/insert) 
+		//this update function is an upsert (update/insert)
 		//if name exists in DB (note that the name has to be unique so only 1 entry) it will be updated, otherwise it will be created
 		models.Krewer.update({name: name}, parseKrewerFile(name), {upsert: true}, function(err,doc){
 			console.log("trying to save "+name +"....");
@@ -60,7 +47,7 @@ function findKrewerFiles(callback){
 				//we successfuly saved a file, now call recursively
 				readNext(files_left);
 			}
-		});	
+		});
 	}
 
 
@@ -142,7 +129,7 @@ function parseKrewerFile(name){
 			const_c: current_line[1],
 			poles: pole_set
 		};
-	}	
+	}
 
 	console.log("poles exit for: "+poles_available);
 	return {

@@ -11,24 +11,10 @@ process.argv.forEach(function (val, index, array) {
 });
 console.log("\n");
 
-
-//if ran as "node populate_db.js local" then connect to test db, otherwise connect to openshift's mongodb instance
-if(process.argv[2] == "test"){
-	mongoose.connect('mongodb://localhost/test');
-}
-else {
-	mongo_connect_string = 'mongodb://' + 
-			process.env.OPENSHIFT_MONGODB_DB_USERNAME + ':' + 
-			process.env.OPENSHIFT_MONGODB_DB_PASSWORD + '@' +
-			process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
-			process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
-			process.env.OPENSHIFT_APP_NAME;
-	mongoose.connect(mongo_connect_string);
-}
-
+mongoose.connect('mongodb://localhost/test');
 
 /*
-	Below are functions to read from files to populate the DB, 
+	Below are functions to read from files to populate the DB,
 	followed by the functions being called to populate the entire DB from scratch, or load in files which aren't already in the DB
 	They are synchronous to produce more meaningful logs
 */
@@ -61,7 +47,7 @@ function readGabrielFile(callback){
 				//we successfuly saved a file, now call recursively
 				readNext(lines_left);
 			}
-		});	
+		});
 	}
 
 
@@ -80,7 +66,7 @@ function exit(){
 
 /*
 Gabriel's 4 pole cole cole models are all saved ina single csv, each line (except line[0] which is column names) is a separate tissue
-Line sample: 
+Line sample:
 	Tissue Type \ Parameter,ef,del1,tau1 (ps),alf1,del2,tau2 (ns),alf2,sig,del3,tau3 (us),alf3,del4,tau4 (ms),alf4
 
 */
@@ -92,11 +78,11 @@ function parseGabrielLine(data){
 		poles:{
 			ef: data[1],
 			sig: data[8],
-			poles:[	
+			poles:[
 					{del: data[2], tau: data[3]/1000000000000, alf: data[4]},
 					{del: data[5], tau: data[6]/1000000000, alf: data[7]},
 					{del: data[9], tau: data[10]/1000000, alf: data[11]},
-					{del: data[12], tau: data[13]/1000, alf: data[14]}	
+					{del: data[12], tau: data[13]/1000, alf: data[14]}
 			]
 		}
 	};

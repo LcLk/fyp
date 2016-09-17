@@ -10,25 +10,11 @@ process.argv.forEach(function (val, index, array) {
   console.log(index + ': ' + val);
 });
 console.log("\n");
-
-
-//if ran as "node populate_db.js local" then connect to test db, otherwise connect to openshift's mongodb instance
-if(process.argv[2] == "test"){
-	mongoose.connect('mongodb://localhost/test');
-}
-else {
-	mongo_connect_string = 'mongodb://' + 
-			process.env.OPENSHIFT_MONGODB_DB_USERNAME + ':' + 
-			process.env.OPENSHIFT_MONGODB_DB_PASSWORD + '@' +
-			process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
-			process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
-			process.env.OPENSHIFT_APP_NAME;
-	mongoose.connect(mongo_connect_string);
-}
+mongoose.connect('mongodb://localhost/test');
 
 
 /*
-	Below are functions to read from files to populate the DB, 
+	Below are functions to read from files to populate the DB,
 	followed by the functions being called to populate the entire DB from scratch, or load in files which aren't already in the DB
 	They are synchronous to produce more meaningful logs
 */
@@ -59,7 +45,7 @@ function findKrewerFiles(callback){
 				//we successfuly saved a file, now call recursively
 				readNext(files_left);
 			}
-		});	
+		});
 	}
 
 
@@ -142,7 +128,7 @@ function parseKrewerFile(name){
 			const_c: current_line[1],
 			pole_sets: pole_set
 		};
-	}	
+	}
 	return {
 		name: name,
 		poles_available: poles_available,
