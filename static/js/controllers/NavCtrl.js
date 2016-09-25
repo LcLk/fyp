@@ -29,7 +29,6 @@ angular.module('app.controllers').controller('NavCtrl', function ($window,$scope
 
 
     $scope.menu = [
-    	{name:"Home", link: "/home",subMenu:[]},
     	{name:"Repository", link: "/repo",subMenu: [
     		{name:"Main ", link: "/repo/home"},
     		{name:"Introduction ", link: "/repo/introduction"},
@@ -39,13 +38,6 @@ angular.module('app.controllers').controller('NavCtrl', function ($window,$scope
     		{name:"Convert ", link: "/repo/import"},
     		{name:"References ", link: "/repo/references"}
     		]},
-    	{name:"Other Page 1", link: "/other1",subMenu:[
-    		{name:"Sub Page 1", link: "/other1/sub1"},
-    		{name:"Sub Page 2", link: "/other1/sub2"},
-    		{name:"Sub Page 3", link: "/other1/sub3"}
-    		]},
-    	{name:"Other Page 2", link: "/other2",subMenu:[]},
-    	{name:"Other Page 3", link: "/other3",subMenu:[]}
     ];
     $scope.footerLinks = [
     	{name: "Disclaimer",link: "/disclaimer"},

@@ -28,18 +28,6 @@ config(function ($routeProvider, $locationProvider) {
     when('/repo',{
       redirectTo: '/repo/home'
     }).
-    when('/other1', {
-      templateUrl: '/views/partials/other1.html',
-      title: "Other Page"
-    }).
-    when('/other2', {
-      templateUrl: '/views/partials/other2.html',
-      title: "Other Page 2"
-    }).
-    when('/other3', {
-      templateUrl: '/views/partials/other3.html',
-      title: "Other Page 3"
-    }).
     otherwise({
       redirectTo: '/home'
     });
