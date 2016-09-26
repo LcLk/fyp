@@ -16,7 +16,7 @@ angular.module('app.controllers').controller('NavCtrl', function ($window,$scope
     */
     $scope.navScrollHeight = 200;
     $scope.navClass = "regular";
-    angular.element($window).bind('scroll', function() { 
+    angular.element($window).bind('scroll', function() {
       if(parseInt($(window).scrollTop()) > $scope.navScrollHeight){
          $scope.$apply(function(){$scope.navClass = "fixed";});
       }
@@ -26,12 +26,9 @@ angular.module('app.controllers').controller('NavCtrl', function ($window,$scope
     });
 
 
-
-
     $scope.menu = [
     	{name:"Repository", link: "/repo",subMenu: [
     		{name:"Main ", link: "/repo/home"},
-    		{name:"Introduction ", link: "/repo/introduction"},
     		{name:"Single Tissue ", link: "/repo/single"},
     		{name:"Multiple Tissues ", link: "/repo/multiple"},
     		{name:"Export ", link: "/repo/export"},
@@ -39,24 +36,18 @@ angular.module('app.controllers').controller('NavCtrl', function ($window,$scope
     		{name:"References ", link: "/repo/references"}
     		]},
     ];
-    $scope.footerLinks = [
-    	{name: "Disclaimer",link: "/disclaimer"},
-    	{name: "Privacy",link: "/privacy.html"},
-    	{name: "Copyright",link: "/copyright.html"},
-    	{name: "Accessibility",link: "/accessibility.html"}
-    ];
 
     $scope.isActive = function(path) {
     	var regex = new RegExp("^"+path,"i");
     	if ($location.path().substr(0, path.length).match(regex) != null)
 	        return " selected";
-	    else 
+	    else
 	      return " ";
 	}
     $scope.show_footer = false;
     $scope.init = true;
 
-//Change page title, based on Route information 
+//Change page title, based on Route information
 $rootScope.$on("$routeChangeSuccess", function(currentRoute, previousRoute){
     $rootScope.title = ($route.current.title == undefined) ? "Repository" : $route.current.title;
 });
@@ -74,7 +65,7 @@ function capitalise(word){
     Initializations
 */
 // $scope.tissues = {};
-// $(document).ready(function(){ 
+// $(document).ready(function(){
 //       $scope.$on('$viewContentLoaded', function() {
 //         //get tissues list
 //         if(Object.keys($scope.tissues).length > 1);
@@ -116,7 +107,7 @@ function capitalise(word){
 //               $scope.tissues = $scope.tissues;
 //               $scope.loaded = true;
 //             });
-//         }   
+//         }
 //       });
 //    });
 
@@ -195,7 +186,7 @@ function capitalise(word){
         redraw: function() {
             console.log('The chart was just redrawn');
         }
-       },   
+       },
        series: [       {
           name: 'Cole-Cole',
           color: '#86C9DE',
@@ -303,7 +294,7 @@ function capitalise(word){
         redraw: function() {
             console.log('The chart was just redrawn');
         }
-       },   
+       },
        series: [
          {
             name: 'Cole-Cole',
